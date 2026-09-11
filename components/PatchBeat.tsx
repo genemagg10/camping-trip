@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AchievementStamp } from "@/components/AchievementStamp";
 import { Reveal } from "@/components/Reveal";
 import { copy } from "@/lib/copy";
 import { photos } from "@/lib/trip";
@@ -16,13 +17,16 @@ export function PatchBeat() {
             width={photos.patch.width}
             height={photos.patch.height}
             className="patch-photo-img"
-            sizes="(min-width: 640px) 22rem, 86vw"
+            sizes="(min-width: 1280px) 32rem, (min-width: 768px) 40vw, 92vw"
             priority
           />
         </figure>
-        <div className="min-w-0">
-          <p className="patch-kicker">{copy.patch.kicker}</p>
-          <h2 className="patch-title mt-1 font-bold tracking-wide text-river uppercase">
+        <div className="patch-copy min-w-0">
+          <div className="flex min-w-0 flex-wrap items-center gap-3">
+            <p className="patch-kicker">{copy.patch.kicker}</p>
+            <AchievementStamp />
+          </div>
+          <h2 className="patch-title mt-2 font-bold tracking-wide text-river uppercase">
             {copy.patch.title}
           </h2>
           <ul className="mt-4 grid gap-2 text-[1.08rem] leading-snug">

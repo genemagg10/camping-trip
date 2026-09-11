@@ -70,7 +70,7 @@ other BSA / Cub badge chrome.
 
 ## Real patch photo (Gene override)
 
-`public/photos/wwe-rafting-patch.png` is the real Whitewater Rafting
+`public/photos/wwe-whitewater-rafting-patch.png` is the real Whitewater Rafting
 patch Whitewater Excitement certifies and awards. Gene supplied this
 asset and overrode the “no BSA art” lock for this file only — the
 fleur-de-lis is on the actual emblem. Do not invent additional badge
