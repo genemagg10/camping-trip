@@ -89,7 +89,7 @@ export function Postcard() {
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[78%_42%]"
+            className="object-cover object-[72%_38%] lg:object-[88%_36%]"
           />
           <div className="hero-scrim absolute inset-0" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 shimmer" />
