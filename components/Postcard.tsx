@@ -72,11 +72,9 @@ function useRiverDrift(ref: RefObject<HTMLDivElement | null>) {
 
 export function Postcard() {
   const hero = useRef<HTMLDivElement>(null);
-  const stackCta = useRef<HTMLAnchorElement>(null);
-  const spreadCta = useRef<HTMLAnchorElement>(null);
+  const cta = useRef<HTMLAnchorElement>(null);
   useRiverDrift(hero);
-  useCtaPulse(stackCta);
-  useCtaPulse(spreadCta);
+  useCtaPulse(cta);
 
   return (
     <section className="w-full lg:grid lg:min-h-svh lg:grid-cols-2">
@@ -85,48 +83,33 @@ export function Postcard() {
         className="hero-drift relative min-h-[28rem] overflow-hidden lg:min-h-svh"
       >
         <Image
-          src={photos.hero.src}
-          alt={photos.hero.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[center_28%] lg:hidden"
-        />
-        <Image
           src={photos.family.src}
           alt={photos.family.alt}
           fill
           priority
-          sizes="50vw"
-          className="hidden object-cover object-[center_20%] lg:block"
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover object-[center_20%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/15 to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 shimmer" />
-        <p className="absolute top-0 right-0 z-20 flex size-[4.25rem] flex-col items-center justify-center bg-foam text-center font-display text-[0.62rem] leading-none font-extrabold tracking-[0.16em] text-ink uppercase lg:hidden">
-          Soft
-          <span className="mt-1.5">hold</span>
-        </p>
-        <div className="hero-pad relative z-10 flex min-h-[28rem] flex-col justify-end pr-20 lg:min-h-svh lg:pr-0">
+        <div className="hero-pad relative z-10 flex min-h-[28rem] flex-col justify-end lg:min-h-svh">
           <h1 className="hero-shout font-display font-extrabold tracking-[0.02em] text-balance text-foam uppercase">
             Last camping trip of the year
           </h1>
-          <p className="hero-den mt-3 text-foam/95">
-            <span className="lg:hidden">Arrow of Light den · Dad + Scout</span>
-            <span className="hidden lg:inline">Arrow of Light den</span>
-          </p>
-          <p className="mt-3 hidden max-w-[36ch] text-foam/90 lg:block">
+          <p className="hero-den mt-3 text-foam/95">Arrow of Light den</p>
+          <p className="mt-3 max-w-[36ch] text-foam/90">
             {trip.river}
             <br />
             {trip.dates}
           </p>
           <a
-            ref={spreadCta}
+            ref={cta}
             href="#rsvp"
-            className="mt-5 hidden min-h-11 w-fit items-center rounded-full bg-river px-6 py-2.5 text-base font-bold text-foam lg:inline-flex"
+            className="mt-5 inline-flex min-h-11 w-fit items-center rounded-full bg-gold px-6 py-2.5 text-base font-bold text-ink"
           >
             I&apos;m interested
           </a>
-          <p className="mt-2 hidden text-xs text-foam/90 lg:block">
+          <p className="mt-2 text-xs text-foam">
             Soft hold · ~${trip.scoutDadApprox} Scout + Dad
           </p>
         </div>
@@ -145,14 +128,8 @@ export function Postcard() {
 
         <div className="flex flex-1 flex-col gap-6 px-4 py-7 lg:px-8 lg:py-8">
           <div className="lg:hidden">
-            <p className="font-display text-2xl font-bold tracking-wide text-river uppercase">
-              {trip.river}
-            </p>
-            <p className="mt-1 text-ink">
+            <p className="text-ink">
               {trip.outfitter} · {trip.city}
-            </p>
-            <p className="mt-1 font-display text-xl font-bold tracking-wide text-ink uppercase">
-              {trip.dates}
             </p>
           </div>
 
@@ -215,17 +192,6 @@ export function Postcard() {
               ))}
             </ul>
           </div>
-
-          <a
-            ref={stackCta}
-            href="#rsvp"
-            className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-river text-base font-bold text-foam lg:hidden"
-          >
-            I&apos;m interested
-          </a>
-          <p className="text-sm text-forest lg:hidden">
-            Gauge only. Nothing booked yet.
-          </p>
 
           <div className="mt-auto flex items-center gap-3">
             <AchievementStamp />

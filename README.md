@@ -48,13 +48,14 @@ env vars.
 ## Design notes
 
 Dieter postcard tokens v1.1 (photo truth) are locked in `app/globals.css`
-(`:root` + Tailwind `@theme`): foam `#F4F7F5`, river `#1F6F8B` (headlines +
-primary CTA), raft cyan `#2896D2` (boat / action accent), sky `#7EC8E3`,
-forest `#2F4F3E`, ink `#1A2420`, paddle gold `#E6B422` (achievement stamp
-only — not Cub insignia), ember `#E07A3D`, mist `#D7E4EA`.
+(`:root` + Tailwind `@theme`): foam `#F4F7F5`, river `#1F6F8B` (headlines),
+raft cyan `#2896D2` (boat / action accent), sky `#7EC8E3`, forest `#2F4F3E`,
+ink `#1A2420`, paddle gold `#E6B422` (hero CTA + achievement stamp — not
+Cub insignia), ember `#E07A3D`, mist `#D7E4EA`.
 
-One scrolling pitch, not still A or B alone. Below 1024px it stacks:
-rafting hero first (still A energy), then camp / plan / costs / Cub patch
-/ CTA. From 1024px it is still B’s side-by-side spread. The achievement
-stamp is a den-made paddle mark for the Cub Scout rafting-patch earn —
-not BSA insignia.
+One scrolling pitch. The hero is still B’s left half at every width:
+full-bleed raft, title + den on the photo, paddle-gold “I'm interested”,
+soft hold + ~$327 under the button. No Soft Hold corner chip. No teal
+body CTA. Below 1024px the plan/camp half scrolls under that hero; from
+1024px the halves sit side by side. The achievement stamp is a den-made
+paddle mark for the Cub Scout rafting-patch earn — not BSA insignia.

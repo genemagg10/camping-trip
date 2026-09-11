@@ -178,13 +178,13 @@ h3,
 
 @keyframes cta-once {
   0% {
-    box-shadow: 0 0 0 0 rgb(31 111 139 / 0);
+    box-shadow: 0 0 0 0 rgb(230 180 34 / 0);
   }
   40% {
-    box-shadow: 0 0 0 8px rgb(31 111 139 / 0.32);
+    box-shadow: 0 0 0 8px rgb(230 180 34 / 0.42);
   }
   100% {
-    box-shadow: 0 0 0 0 rgb(31 111 139 / 0);
+    box-shadow: 0 0 0 0 rgb(230 180 34 / 0);
   }
 }
 
