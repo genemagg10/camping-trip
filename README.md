@@ -53,7 +53,8 @@ primary CTA), raft cyan `#2896D2` (boat / action accent), sky `#7EC8E3`,
 forest `#2F4F3E`, ink `#1A2420`, paddle gold `#E6B422` (achievement stamp
 only — not Cub insignia), ember `#E07A3D`, mist `#D7E4EA`.
 
-Mobile locks to still A (soft-hold chip, hero shout, three thumbs, ember
-bullets, river CTA). From 1024px the postcard is still B’s full-bleed
-spread. The achievement stamp is a den-made paddle mark for the Cub Scout
-rafting-patch earn — not BSA insignia.
+One scrolling pitch, not still A or B alone. Below 1024px it stacks:
+rafting hero first (still A energy), then camp / plan / costs / Cub patch
+/ CTA. From 1024px it is still B’s side-by-side spread. The achievement
+stamp is a den-made paddle mark for the Cub Scout rafting-patch earn —
+not BSA insignia.
