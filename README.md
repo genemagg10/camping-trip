@@ -99,6 +99,13 @@ Skits and Youth-Led Cooking Challenge stay off the page.
 only — it scrolls to the early Cub rafting patch beat. The old Who’s in?
 block is **Logistics & costs** (soft hold, $327 breakdown, WWE contact).
 
+**GETTING_THERE_V1** is a real OpenStreetMap `export/embed.html` iframe
+(no API key) above Logistics on phone, beside it from 1280px if the
+cost card still fits. Caption is the public approx:
+**120 miles / 2–2½ hours** non-rush Lafayette → WWE at
+6580 Highway 49, Lotus, CA 95651. “Open in Maps” is a secondary
+directions link, not a live traffic quote. No schematic SVG.
+
 **DESIGN_SCHEDULE_V1** is the Fri / Sat / Sun tabbed day card: gold
 timeline, hollow river-teal dots, activity cards with a gold top rule.
 Phone stacks the card then 1-col activities; mid is 2×2; wide sits

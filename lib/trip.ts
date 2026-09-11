@@ -30,6 +30,18 @@ export const trip = {
   phone: "800.750.2386",
   phoneHref: "tel:8007502386",
   city: "Lotus, CA",
+  address: "6580 Highway 49, Lotus, CA 95651",
+  homeTown: "Lafayette, CA",
+  /** WWE published camp GPS (not Camp Lotus on Bassi Rd). */
+  destLat: 38.817646,
+  destLon: -120.928499,
+  mapsDirections:
+    "https://www.google.com/maps/dir/Lafayette,+CA/6580+Highway+49,+Lotus,+CA+95651",
+  /** Official OSM share embed: bbox covers Lafayette + Lotus; pin is WWE. */
+  osmEmbed:
+    "https://www.openstreetmap.org/export/embed.html?bbox=-122.62%2C37.58%2C-120.48%2C39.12&layer=mapnik&marker=38.817646%2C-120.928499",
+  osmLarger:
+    "https://www.openstreetmap.org/?mlat=38.817646&mlon=-120.928499#map=8/38.35/-121.55",
 } as const;
 
 export const photos = {
