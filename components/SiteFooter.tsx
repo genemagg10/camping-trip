@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="border-t border-mist px-4 py-8 text-sm text-ink/75 sm:px-6">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="font-display text-2xl tracking-wide text-river uppercase">
+          <p className="text-lg font-bold tracking-wide text-river uppercase">
             {trip.outfitter}
           </p>
           <p>

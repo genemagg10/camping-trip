@@ -97,11 +97,10 @@ export function Postcard() {
         <div className="hero-pad relative z-10 flex min-h-[28rem] flex-col justify-end lg:min-h-svh">
           <div className="hero-copy">
             <div className="hero-title-block">
-              <p className="hero-burst font-display uppercase">Hit the river</p>
-              <h1 className="hero-shout font-display tracking-[0.02em] text-foam uppercase">
+              <h1 className="hero-shout tracking-[0.02em] text-foam uppercase">
                 Last camping trip of the year!
               </h1>
-              <p className="hero-den font-display text-foam uppercase">
+              <p className="hero-den text-foam uppercase">
                 Arrow of Light den
               </p>
               <p className="hero-meta text-foam/90">
@@ -145,7 +144,7 @@ export function Postcard() {
           <ul className="grid grid-cols-3 gap-2 lg:hidden">
             {thumbs.map((item) => (
               <li key={item.label} className="min-w-0">
-                <figure className="comic-panel overflow-hidden rounded-lg bg-mist">
+                <figure className="overflow-hidden rounded-lg bg-mist ring-2 ring-ink/15">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={item.photo.src}
@@ -166,7 +165,7 @@ export function Postcard() {
           <ul className="hidden min-w-0 grid-cols-2 gap-3 lg:grid">
             {wideThumbs.map((photo) => (
               <li key={photo.src} className="min-w-0">
-                <div className="comic-panel relative aspect-[16/10] overflow-hidden rounded-lg bg-mist">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-mist ring-2 ring-ink/15">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
@@ -189,7 +188,7 @@ export function Postcard() {
           </ul>
 
           <div className="hidden min-w-0 lg:block">
-            <h2 className="section-shout font-display text-3xl tracking-wide text-river uppercase">
+            <h2 className="text-xl font-bold tracking-wide text-river uppercase">
               The plan
             </h2>
             <ul className="mt-3 grid gap-2 text-[1.02rem] leading-snug">
@@ -205,7 +204,7 @@ export function Postcard() {
           <div className="mt-auto flex items-center gap-3">
             <AchievementStamp />
             <p className="text-sm leading-snug text-ink">
-              <span className="font-display text-lg tracking-wide text-ink uppercase">
+              <span className="text-base font-bold tracking-wide text-ink uppercase">
                 {trip.patchBeat}
               </span>
               <span className="mt-0.5 block text-xs text-ink/65">
