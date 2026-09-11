@@ -8,7 +8,7 @@ export const copy = {
     river: trip.river,
     place: `${trip.outfitter}, ${trip.city}`,
     dates: trip.dates,
-    cta: "I'm interested",
+    cta: "Earn the Cub rafting patch",
     hold: `Soft hold only · about $${trip.scoutDadApprox} for Scout + Dad · nothing booked until the den says go`,
     paragraph: `This is the last overnight before these Scouts cross into Scouts BSA. Two nights at ${trip.outfitter}’s private river camp — bathrooms, hot showers, the South Fork right there. Saturday morning they earn the Cub Scout rafting patch (they certify and award it), then we paddle about fourteen miles and eat lunch on the water. Soft hold only. Nothing is booked until the den says go.`,
   },
@@ -16,11 +16,30 @@ export const copy = {
     title: "Why this trip",
     body: "We camp at their private river camp — bathrooms, hot showers, fire rings, picnic tables, the river in earshot. Saturday is the long day: Cub Scout rafting patch lesson and award, then about fourteen miles on the South Fork with lunch. Saturday night we keep at the fire — Passing the Paddle, then Time Capsule Letters. This is a den weekend, not a corporate flyer.",
   },
-  cost: `Scout + Dad lands around $${trip.scoutDadApprox}: camp $${trip.campPerPersonNight} per person per night × ${trip.campNights} nights, Scout raft $${trip.scoutRaft}, adult raft $${trip.adultRaft}. Meals are shared separately. Soft hold only.`,
-  rsvp: {
-    title: "Who’s in?",
-    body: `Raise a hand if this weekend should happen. Soft hold only — about $${trip.scoutDadApprox} for Scout + Dad, nothing booked until the den says go. Saved in this browser. Not a booking.`,
-    cta: "I'm interested",
+  patch: {
+    kicker: "Sat 9am",
+    title: "Earn the Cub rafting patch",
+    lesson: "Lesson Saturday at 9am.",
+    award: `${trip.outfitter} certifies and awards the Cub Scout rafting patch.`,
+    river: "Then about fourteen miles on the South Fork — plus lunch.",
+    honest:
+      "Phone-confirmed with the outfitter. Their public site lists the troop Merit Badge. This EARN IT stamp is den-made — not BSA or Cub badge art.",
+  },
+  logistics: {
+    title: "Logistics & costs",
+    hold: `Soft hold · ${trip.dates}. Nothing is booked until the den says go.`,
+    rows: [
+      {
+        label: "Camp",
+        value: `$${trip.campPerPersonNight}/person/night × ${trip.campNights} nights`,
+      },
+      { label: "Scout raft", value: `$${trip.scoutRaft}` },
+      { label: "Adult raft", value: `$${trip.adultRaft}` },
+    ],
+    totalLabel: "Scout + Dad",
+    totalValue: `≈ $${trip.scoutDadApprox}`,
+    meals: `${trip.mealsNote} Bring and share. Friday dinner is own gear / own food.`,
+    outfitter: `${trip.outfitter} · ${trip.city}`,
   },
 } as const;
 

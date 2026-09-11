@@ -1,6 +1,7 @@
+import { Logistics } from "@/components/Logistics";
+import { PatchBeat } from "@/components/PatchBeat";
 import { Postcard } from "@/components/Postcard";
 import { RiverBand } from "@/components/RiverBand";
-import { Rsvp } from "@/components/Rsvp";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Weekend } from "@/components/Weekend";
 
@@ -9,9 +10,10 @@ export default function Home() {
     <>
       <main>
         <Postcard />
+        <PatchBeat />
         <Weekend />
         <RiverBand />
-        <Rsvp />
+        <Logistics />
       </main>
       <SiteFooter />
     </>

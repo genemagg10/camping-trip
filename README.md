@@ -4,7 +4,7 @@ Warm dad postcard pitch for an Arrow of Light den rafting + camp weekend on
 the South Fork American River with
 [Whitewater Excitement](https://whitewaterexcitement.com) (Lotus, CA).
 
-**Soft hold only** — nothing is booked yet. This site gauges family interest.
+**Soft hold only** — nothing is booked yet. No RSVP form. Dream CTA sells the Cub rafting patch.
 
 ## Trip (locked)
 
@@ -42,7 +42,7 @@ GITHUB_PAGES=true npm run build
 Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · static export for
 GitHub Pages.
 
-Interest RSVP is local-only (`localStorage`). No backend.
+No RSVP / localStorage interest form. Soft hold is prose only.
 
 ## Run
 
@@ -74,15 +74,22 @@ Hero type is fluid (`clamp`) with safe padding so the shout, gold CTA,
 and soft-hold line wrap instead of clipping from phone through wide.
 
 One scrolling pitch. The hero is still B’s left half at every width:
-full-bleed raft, title + den on the photo, paddle-gold “I'm interested”,
-soft hold + about $327 under the button. No Soft Hold corner chip. No teal
-body CTA. Below 1024px the plan/camp half scrolls under that hero; from
-1024px the halves sit side by side. The achievement stamp is a den-made
-paddle mark for the Cub Scout rafting-patch earn — not BSA insignia.
+full-bleed raft, title + den on the photo, paddle-gold “Earn the Cub
+rafting patch” (anchors to the patch beat), soft-hold prose under the
+button. **HERO_FOCAL_V1** keeps the yellow-helmet Cub + raft crew as the
+optical center (`object-fit: cover` + near-center). Do not pan-crop to
+clear type. No Soft Hold corner chip. No teal body CTA. No booking button.
+Below 1024px the plan/camp half scrolls under that hero; from 1024px the
+halves sit side by side. The achievement stamp is a den-made paddle mark
+for the Cub Scout rafting-patch earn — not BSA insignia.
 
 **CONTENT_POLISH_V1** copy lives in `lib/copy.ts` (hero, why-this-trip,
-cost prose, RSVP, day intros, four activity cards). Legacy Roast Skits
-and Youth-Led Cooking Challenge stay off the page.
+patch beat, logistics, day intros, four activity cards). Legacy Roast
+Skits and Youth-Led Cooking Challenge stay off the page.
+
+**LOGISTICS_CTA_V1** kills the interest form. The gold CTA is dream-sell
+only — it scrolls to the early Cub rafting patch beat. The old Who’s in?
+block is **Logistics & costs** (soft hold, $327 breakdown, WWE contact).
 
 **DESIGN_SCHEDULE_V1** is the Fri / Sat / Sun tabbed day card: gold
 timeline, hollow river-teal dots, activity cards with a gold top rule.
