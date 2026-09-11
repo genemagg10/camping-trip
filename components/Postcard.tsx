@@ -170,10 +170,13 @@ export function Postcard() {
               {copy.why.title}
             </h2>
             <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
-              {copy.hero.paragraph}
+              {copy.why.p1}
             </p>
             <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
-              {copy.why.body}
+              {copy.why.p2}
+            </p>
+            <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
+              {copy.why.p3}
             </p>
           </div>
         </div>

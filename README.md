@@ -14,7 +14,7 @@ the South Fork American River with
 - **Ballpark:** Scout + Dad ≈ **$327** (raft + lunch + 2 nights camp)
   - Camp $15/person/night × 2 nights
   - Scout raft $129 · adult raft $138
-- **Meals:** Families still share meals and snacks. Friday dinner is own gear / own food.
+- **Meals:** Breakfast and dinner planned as a group. WWE provides lunch on the rafting trip.
 - **Outfitter:** [whitewaterexcitement.com](https://whitewaterexcitement.com) · 800.750.2386 · Lotus, CA
 
 Photo credits and source URLs live in [`SOURCE.md`](./SOURCE.md).
@@ -82,6 +82,9 @@ clear type. No Soft Hold corner chip. No teal body CTA. No booking button.
 Below 1024px the plan/camp half scrolls under that hero; from 1024px the
 halves sit side by side. The achievement stamp is a den-made paddle mark
 for the Cub Scout rafting-patch earn — not BSA insignia.
+
+**WHY_THIS_TRIP_V1** — Gene locked the three Why this trip paragraphs
+verbatim in `lib/copy.ts`. Do not paraphrase.
 
 **CONTENT_POLISH_V1** copy lives in `lib/copy.ts` (hero, why-this-trip,
 patch beat, logistics, day intros, four activity cards). Legacy Roast

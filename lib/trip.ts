@@ -24,7 +24,8 @@ export const trip = {
   scoutRaft: 129,
   adultRaft: 138,
   scoutDadApprox: 327,
-  mealsNote: "Families still share meals and snacks.",
+  mealsNote:
+    "Breakfast and dinner planned as a group. Whitewater Excitement provides lunch on the rafting trip.",
   website: "https://whitewaterexcitement.com",
   phone: "800.750.2386",
   phoneHref: "tel:8007502386",
