@@ -137,10 +137,7 @@ export function Postcard() {
           </li>
           <li className="flex gap-2">
             <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
-            <span>
-              Sat water + lunch: Cub Scout rafting patch lesson, then ~14
-              miles.
-            </span>
+            <span>Sat water + lunch: ~14 miles on the South Fork.</span>
           </li>
           <li className="flex gap-2">
             <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
@@ -153,7 +150,7 @@ export function Postcard() {
         <div className="flex items-center gap-4">
           <AchievementStamp />
           <p className="max-w-xs font-display text-lg leading-tight font-bold tracking-wide text-ink uppercase">
-            Cub Scout rafting patch. Then ~14 miles.
+            River day. Paddles up. Then ~14 miles.
           </p>
         </div>
 

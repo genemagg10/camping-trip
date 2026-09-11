@@ -53,6 +53,6 @@ because the attachment copies were not on disk in this workspace.
 
 ## Original artwork
 
-`app/icon.svg` and the on-page Cub Scout rafting patch illustration are
-original den-flyer art for this site. They are not official Boy Scouts of
-America or Cub Scout trademarks.
+`app/icon.svg` and the on-page achievement stamp are original den-flyer
+art (paddles + wave). They are not official Boy Scouts of America or Cub
+Scout trademarks, and they do not depict a named Cub or Merit Badge.

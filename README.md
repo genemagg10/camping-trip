@@ -10,7 +10,7 @@ the South Fork American River with
 
 - **When:** Fri Apr 23 – Sun Apr 25
 - **Where:** Whitewater Excitement private campground (bathrooms + hot showers) · South Fork American River
-- **Highlight:** Sat morning Cub Scout rafting patch lesson (they certify and award the patch), then ~14 miles of rafting + lunch
+- **Highlight:** Saturday on the water, then ~14 miles of rafting + lunch. Named Cub rafting-patch copy is held until Gene confirms.
 - **Ballpark:** Scout + Dad ≈ **$327** (raft + lunch + 2 nights camp)
   - Camp $15/person/night × 2 nights
   - Scout raft $129 · adult raft $138
@@ -53,5 +53,5 @@ Dieter postcard tokens v1 are locked in `app/globals.css` (`:root` + Tailwind
 only), ember `#E07A3D`, mist `#D7E4EA`.
 
 Mobile stacks the rafting hero over the plan. From 1024px the postcard splits
-side by side. The achievement stamp is den-made (paddles + wave), not BSA
-insignia. Cub Scout rafting patch is named in copy.
+side by side. The achievement stamp is a den-made paddle mark, not BSA
+insignia. Named Cub Scout rafting-patch copy is held.

@@ -9,8 +9,7 @@ export const trip = {
   holdLine:
     "Soft hold only — nothing is committed. This page gauges den interest.",
   friday: "Arrive, tent camp, easy dinner (own gear / own food).",
-  saturdayPatch:
-    "9am: Cub Scout rafting patch lesson. Whitewater Excitement certifies and awards the Cub Scout rafting patch.",
+  saturdayMorning: "Saturday morning on the water, then ~14 miles of rafting + lunch.",
   saturdayRiver: "Then ~14 miles of rafting + lunch.",
   saturdayNight: "Camp dinner.",
   sunday: "Breakfast, pack, home.",
