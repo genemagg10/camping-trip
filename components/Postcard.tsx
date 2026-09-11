@@ -77,27 +77,31 @@ export function Postcard() {
   useCtaPulse(cta);
 
   return (
-    <section className="w-full lg:grid lg:min-h-svh lg:grid-cols-2">
+    <section className="w-full min-w-0 lg:grid lg:min-h-svh lg:grid-cols-2">
       <div
         ref={hero}
-        className="hero-drift relative min-h-[28rem] overflow-hidden lg:min-h-svh"
+        className="hero-drift relative min-h-[28rem] min-w-0 lg:min-h-svh"
       >
-        <Image
-          src={photos.family.src}
-          alt={photos.family.alt}
-          fill
-          priority
-          sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover object-[center_20%]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/15 to-transparent" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 shimmer" />
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            src={photos.family.src}
+            alt={photos.family.alt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover object-[center_20%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/15 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 shimmer" />
+        </div>
         <div className="hero-pad relative z-10 flex min-h-[28rem] flex-col justify-end lg:min-h-svh">
-          <h1 className="hero-shout font-display font-extrabold tracking-[0.02em] text-balance text-foam uppercase">
+          <h1 className="hero-shout font-display font-extrabold tracking-[0.02em] text-pretty text-foam uppercase">
             Last camping trip of the year
           </h1>
-          <p className="hero-den mt-3 text-foam/95">Arrow of Light den</p>
-          <p className="mt-3 max-w-[36ch] text-foam/90">
+          <p className="hero-den mt-3 text-pretty text-foam/95">
+            Arrow of Light den
+          </p>
+          <p className="hero-meta mt-3 text-pretty text-foam/90">
             {trip.river}
             <br />
             {trip.dates}
@@ -105,17 +109,17 @@ export function Postcard() {
           <a
             ref={cta}
             href="#rsvp"
-            className="mt-5 inline-flex min-h-11 w-fit items-center rounded-full bg-gold px-6 py-2.5 text-base font-bold text-ink"
+            className="hero-cta mt-4 inline-flex w-fit shrink-0 items-center rounded-full bg-gold px-6 text-base font-bold text-ink"
           >
             I&apos;m interested
           </a>
-          <p className="mt-2 text-xs text-foam">
+          <p className="hero-hold mt-2 text-pretty text-foam">
             Soft hold · ~${trip.scoutDadApprox} Scout + Dad
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col bg-foam">
+      <div className="flex min-w-0 flex-col bg-foam">
         <div className="relative hidden min-h-64 overflow-hidden bg-mist lg:block">
           <Image
             src={photos.tents.src}
@@ -126,7 +130,7 @@ export function Postcard() {
           />
         </div>
 
-        <div className="flex flex-1 flex-col gap-6 px-4 py-7 lg:px-8 lg:py-8">
+        <div className="flex min-w-0 flex-1 flex-col gap-6 px-4 py-7 lg:px-8 lg:py-8">
           <div className="lg:hidden">
             <p className="text-ink">
               {trip.outfitter} · {trip.city}
@@ -174,12 +178,12 @@ export function Postcard() {
             {stackBullets.map((line) => (
               <li key={line} className="flex gap-2">
                 <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
-                <span>{line}</span>
+                <span className="min-w-0 text-pretty">{line}</span>
               </li>
             ))}
           </ul>
 
-          <div className="hidden lg:block">
+          <div className="hidden min-w-0 lg:block">
             <h2 className="font-display text-2xl font-bold tracking-wide text-river uppercase">
               The plan
             </h2>
@@ -187,7 +191,7 @@ export function Postcard() {
               {spreadPlan.map((line) => (
                 <li key={line} className="flex gap-2">
                   <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
-                  <span>{line}</span>
+                  <span className="min-w-0 text-pretty">{line}</span>
                 </li>
               ))}
             </ul>

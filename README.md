@@ -53,6 +53,9 @@ raft cyan `#2896D2` (boat / action accent), sky `#7EC8E3`, forest `#2F4F3E`,
 ink `#1A2420`, paddle gold `#E6B422` (hero CTA + achievement stamp — not
 Cub insignia), ember `#E07A3D`, mist `#D7E4EA`.
 
+Hero type is fluid (`clamp`) with safe padding so the shout, gold CTA,
+and soft-hold line wrap instead of clipping from phone through wide.
+
 One scrolling pitch. The hero is still B’s left half at every width:
 full-bleed raft, title + den on the photo, paddle-gold “I'm interested”,
 soft hold + ~$327 under the button. No Soft Hold corner chip. No teal
