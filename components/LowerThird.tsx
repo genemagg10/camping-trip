@@ -15,7 +15,7 @@ const days = [
   {
     day: "Sat night",
     date: "Apr 24",
-    line: "Campfire — goals and activities in the block beside this.",
+    line: "Campfire — goals and activities in the block below.",
   },
   {
     day: "Sun",
