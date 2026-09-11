@@ -85,7 +85,7 @@ export function Postcard() {
           <a
             ref={cta}
             href="#rsvp"
-            className="mt-4 inline-flex min-h-11 w-fit items-center rounded-full bg-gold px-5 py-2.5 text-base font-bold text-ink"
+            className="mt-4 inline-flex min-h-11 w-fit items-center rounded-full bg-river px-5 py-2.5 text-base font-bold text-foam"
           >
             I&apos;m interested
           </a>
@@ -144,18 +144,16 @@ export function Postcard() {
           </li>
           <li className="flex gap-2">
             <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
-            <span>
-              Scout + Dad ≈ ${trip.scoutDadApprox} (raft + lunch + 2 nights).
-              Soft hold.
+            <span className="font-display text-xl font-extrabold tracking-wide uppercase">
+              Scout + Dad ≈ ${trip.scoutDadApprox}
             </span>
           </li>
         </ul>
 
         <div className="flex items-center gap-4">
           <AchievementStamp />
-          <p className="max-w-xs text-sm leading-relaxed text-ink/80">
-            Saturday they earn the Cub Scout rafting patch — Whitewater
-            Excitement certifies and awards it. Then the river does the rest.
+          <p className="max-w-xs font-display text-lg leading-tight font-bold tracking-wide text-ink uppercase">
+            Cub Scout rafting patch. Then ~14 miles.
           </p>
         </div>
 

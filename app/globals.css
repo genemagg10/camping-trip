@@ -1,15 +1,26 @@
 @import "tailwindcss";
 
+/* Dieter postcard tokens v1 — do not drift these hexes. */
+:root {
+  --foam: #f4f7f5;
+  --river: #1f6f8b;
+  --sky: #7ec8e3;
+  --forest: #2f4f3e;
+  --ink: #1a2420;
+  --patch-gold: #e6b422;
+  --ember: #e07a3d;
+  --mist: #d7e4ea;
+}
+
 @theme inline {
-  --color-foam: #f4f7f5;
-  --color-river: #1f6f8b;
-  --color-sky: #7ec8e3;
-  --color-forest: #2f4f3e;
-  --color-ink: #1a2420;
-  --color-gold: #e6b422;
-  --color-ember: #e07a3d;
-  --color-mist: #d7e4ea;
-  --color-raft: #2896d2;
+  --color-foam: var(--foam);
+  --color-river: var(--river);
+  --color-sky: var(--sky);
+  --color-forest: var(--forest);
+  --color-ink: var(--ink);
+  --color-gold: var(--patch-gold);
+  --color-ember: var(--ember);
+  --color-mist: var(--mist);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
 }
@@ -165,13 +176,13 @@ h3,
 
 @keyframes cta-once {
   0% {
-    box-shadow: 0 0 0 0 rgba(230, 180, 34, 0);
+    box-shadow: 0 0 0 0 rgb(31 111 139 / 0);
   }
   40% {
-    box-shadow: 0 0 0 8px rgba(230, 180, 34, 0.35);
+    box-shadow: 0 0 0 8px rgb(31 111 139 / 0.32);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(230, 180, 34, 0);
+    box-shadow: 0 0 0 0 rgb(31 111 139 / 0);
   }
 }
 

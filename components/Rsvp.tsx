@@ -114,7 +114,7 @@ export function Rsvp() {
                   key={value}
                   className={`cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-semibold ${
                     form.interest === value
-                      ? "border-gold bg-gold/20"
+                      ? "border-river bg-sky/30"
                       : "border-mist bg-foam"
                   }`}
                 >
