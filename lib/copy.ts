@@ -27,6 +27,18 @@ export const copy = {
     honest:
       "This is the Whitewater Rafting patch Whitewater Excitement certifies and awards. Phone-confirmed with the outfitter. Their public site lists the troop Merit Badge.",
   },
+  gettingThere: {
+    title: "Getting there · Lafayette to Lotus",
+    captionBefore: "About ",
+    captionFact: "120 miles / 2–2½ hours",
+    captionAfter:
+      " non-rush from Lafayette to Whitewater Excitement in Lotus (6580 Highway 49, Lotus, CA 95651).",
+    caveat: "Friday/weekend US-50 can run longer. Not a live traffic quote.",
+    mapsLabel: "Open in Maps",
+    osmLabel: "View larger map",
+    frameTitle:
+      "OpenStreetMap of Lafayette, California to Whitewater Excitement at 6580 Highway 49, Lotus",
+  },
   logistics: {
     title: "Logistics & costs",
     hold: `Soft hold · ${trip.dates}. Nothing is booked until the den says go.`,
