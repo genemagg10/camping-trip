@@ -7,7 +7,7 @@ import { photos, trip } from "@/lib/trip";
 
 const thumbs = [
   { photo: photos.halfDay, label: "River" },
-  { photo: photos.tents, label: "Private camp" },
+  { photo: photos.riversideTent, label: "Private camp" },
   { photo: photos.scouts, label: "Young rafters" },
 ] as const;
 
