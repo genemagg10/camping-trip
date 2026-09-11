@@ -47,11 +47,13 @@ env vars.
 
 ## Design notes
 
-Dieter postcard tokens v1 are locked in `app/globals.css` (`:root` + Tailwind
-`@theme`): foam `#F4F7F5`, river `#1F6F8B` (headlines + primary CTA), sky
-`#7EC8E3`, forest `#2F4F3E`, ink `#1A2420`, patch gold `#E6B422` (stamp beat
-only), ember `#E07A3D`, mist `#D7E4EA`.
+Dieter postcard tokens v1.1 (photo truth) are locked in `app/globals.css`
+(`:root` + Tailwind `@theme`): foam `#F4F7F5`, river `#1F6F8B` (headlines +
+primary CTA), raft cyan `#2896D2` (boat / action accent), sky `#7EC8E3`,
+forest `#2F4F3E`, ink `#1A2420`, paddle gold `#E6B422` (achievement stamp
+only — not Cub insignia), ember `#E07A3D`, mist `#D7E4EA`.
 
-Mobile stacks the rafting hero over the plan. From 1024px the postcard splits
-side by side. The achievement stamp is a den-made paddle mark, not BSA
-insignia. Named Cub Scout rafting-patch copy is held.
+Mobile locks to still A (soft-hold chip, hero shout, three thumbs, ember
+bullets, river CTA). From 1024px the postcard is still B’s full-bleed
+spread. The achievement stamp is a den-made paddle mark, not BSA insignia.
+Named Cub Scout rafting-patch copy is held.

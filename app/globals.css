@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
-/* Dieter postcard tokens v1 — do not drift these hexes. */
+/* Dieter postcard tokens v1.1 — photo truth. Do not drift these hexes. */
 :root {
   --foam: #f4f7f5;
   --river: #1f6f8b;
+  --raft: #2896d2;
   --sky: #7ec8e3;
   --forest: #2f4f3e;
   --ink: #1a2420;
@@ -15,6 +16,7 @@
 @theme inline {
   --color-foam: var(--foam);
   --color-river: var(--river);
+  --color-raft: var(--raft);
   --color-sky: var(--sky);
   --color-forest: var(--forest);
   --color-ink: var(--ink);
