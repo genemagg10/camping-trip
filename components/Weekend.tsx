@@ -104,28 +104,28 @@ export function Weekend() {
           </article>
         </Reveal>
 
-        <div className="grid min-w-0 gap-3 sm:grid-cols-2">
-          <Reveal className="min-w-0 sm:col-span-2">
-            <p className="text-[0.98rem] leading-relaxed text-pretty text-ink/70">
-              {activitiesIntro}
-            </p>
+        <div className="activity-stack min-w-0">
+          <Reveal>
+            <p className="activity-intro">{activitiesIntro}</p>
           </Reveal>
-          {activities.map((card, index) => (
-            <Reveal
-              key={card.title}
-              delay={(Math.min(index, 3) as 0 | 1 | 2 | 3)}
-              as="article"
-              className="activity-card min-w-0 rounded-xl bg-white px-4 py-4"
-            >
-              <h3 className="text-[1.05rem] font-bold leading-snug text-pretty text-ink">
-                {card.title}
-              </h3>
-              <p className="mt-1 text-sm text-ink/55">{card.when}</p>
-              <p className="mt-2 text-[0.98rem] leading-relaxed text-pretty text-ink/80">
-                {card.body}
-              </p>
-            </Reveal>
-          ))}
+          <div className="grid min-w-0 gap-3 sm:grid-cols-2">
+            {activities.map((card, index) => (
+              <Reveal
+                key={card.title}
+                delay={(Math.min(index, 3) as 0 | 1 | 2 | 3)}
+                as="article"
+                className="activity-card min-w-0 rounded-xl bg-white px-4 py-4"
+              >
+                <h3 className="text-[1.05rem] font-bold leading-snug text-pretty text-ink">
+                  {card.title}
+                </h3>
+                <p className="mt-1 text-sm text-ink/55">{card.when}</p>
+                <p className="mt-2 text-[0.98rem] leading-relaxed text-pretty text-ink/80">
+                  {card.body}
+                </p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
