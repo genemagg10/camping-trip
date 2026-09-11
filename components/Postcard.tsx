@@ -95,27 +95,29 @@ export function Postcard() {
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 shimmer" />
         </div>
         <div className="hero-pad relative z-10 flex min-h-[28rem] flex-col justify-end lg:min-h-svh">
-          <h1 className="hero-shout font-display font-extrabold tracking-[0.02em] text-pretty text-foam uppercase">
-            Last camping trip of the year
-          </h1>
-          <p className="hero-den mt-3 text-pretty text-foam/95">
-            Arrow of Light den
-          </p>
-          <p className="hero-meta mt-3 text-pretty text-foam/90">
-            {trip.river}
-            <br />
-            {trip.dates}
-          </p>
-          <a
-            ref={cta}
-            href="#rsvp"
-            className="hero-cta mt-4 inline-flex w-fit shrink-0 items-center rounded-full bg-gold px-6 text-base font-bold text-ink"
-          >
-            I&apos;m interested
-          </a>
-          <p className="hero-hold mt-2 text-pretty text-foam">
-            Soft hold · ~${trip.scoutDadApprox} Scout + Dad
-          </p>
+          <div className="hero-copy">
+            <div className="hero-title-block">
+              <h1 className="hero-shout font-display font-extrabold tracking-[0.02em] text-foam uppercase">
+                Last camping trip of the year
+              </h1>
+              <p className="hero-den text-foam/95">Arrow of Light den</p>
+              <p className="hero-meta text-foam/90">
+                {trip.river}
+                <br />
+                {trip.dates}
+              </p>
+            </div>
+            <a
+              ref={cta}
+              href="#rsvp"
+              className="hero-cta inline-flex w-fit shrink-0 items-center rounded-full bg-gold px-6 text-base font-bold text-ink"
+            >
+              I&apos;m interested
+            </a>
+            <p className="hero-hold text-foam">
+              Soft hold · ~${trip.scoutDadApprox} Scout + Dad
+            </p>
+          </div>
         </div>
       </div>
 
@@ -130,7 +132,7 @@ export function Postcard() {
           />
         </div>
 
-        <div className="flex min-w-0 flex-1 flex-col gap-6 px-4 py-7 lg:px-8 lg:py-8">
+        <div className="plan-half flex min-w-0 flex-1 flex-col gap-6">
           <div className="lg:hidden">
             <p className="text-ink">
               {trip.outfitter} · {trip.city}
@@ -150,7 +152,7 @@ export function Postcard() {
                       className="object-cover"
                     />
                   </div>
-                  <figcaption className="px-1 py-1.5 text-center text-[0.68rem] font-semibold tracking-wide text-forest uppercase">
+                  <figcaption className="min-w-0 px-1 py-1.5 text-center text-[0.68rem] font-semibold break-words tracking-wide text-forest uppercase">
                     {item.label}
                   </figcaption>
                 </figure>
@@ -158,9 +160,9 @@ export function Postcard() {
             ))}
           </ul>
 
-          <ul className="hidden grid-cols-2 gap-3 lg:grid">
+          <ul className="hidden min-w-0 grid-cols-2 gap-3 lg:grid">
             {wideThumbs.map((photo) => (
-              <li key={photo.src}>
+              <li key={photo.src} className="min-w-0">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-mist ring-2 ring-raft/35">
                   <Image
                     src={photo.src}
