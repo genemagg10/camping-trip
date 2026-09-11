@@ -361,12 +361,19 @@ h3 {
   min-height: 2.4rem;
 }
 
+.schedule-card,
+.activity-card {
+  box-shadow:
+    0 1px 0 rgb(26 36 32 / 0.04),
+    0 10px 28px rgb(26 36 32 / 0.06);
+}
+
 .schedule-rail::before {
   content: "";
   position: absolute;
   top: 0.55rem;
   bottom: -1.35rem;
-  width: 2px;
+  width: 3px;
   background: var(--patch-gold);
 }
 
@@ -378,12 +385,12 @@ h3 {
   position: relative;
   z-index: 1;
   margin-top: 0.28rem;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.72rem;
+  height: 0.72rem;
   border-radius: 999px;
   border: 2px solid var(--river);
-  background: var(--foam);
-  box-shadow: 0 0 0 2px var(--foam);
+  background: #fff;
+  box-shadow: 0 0 0 2px #fff;
 }
 
 .activity-card {

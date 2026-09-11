@@ -68,7 +68,7 @@ export function Weekend() {
             role="tabpanel"
             id={`${baseId}-panel-${day.id}`}
             aria-labelledby={`${baseId}-tab-${day.id}`}
-            className="schedule-card min-w-0 rounded-2xl bg-foam px-5 py-6 ring-1 ring-ink/10 sm:px-6"
+            className="schedule-card min-w-0 rounded-2xl bg-white px-5 py-6 sm:px-6"
           >
             <header>
               <h3 className="text-sm font-bold tracking-[0.14em] text-river uppercase">
@@ -110,7 +110,7 @@ export function Weekend() {
               key={card.title}
               delay={(Math.min(index, 3) as 0 | 1 | 2 | 3)}
               as="article"
-              className="activity-card min-w-0 rounded-xl bg-foam px-4 py-4 ring-1 ring-ink/10"
+              className="activity-card min-w-0 rounded-xl bg-white px-4 py-4"
             >
               <h3 className="text-[1.05rem] font-bold leading-snug text-pretty text-ink">
                 {card.title}
