@@ -12,6 +12,9 @@ export type RsvpRecord = {
 };
 
 const listeners = new Set<() => void>();
+let snapshotRaw: string | null = null;
+let snapshot: RsvpRecord | null = null;
+let hydrated = false;
 
 function emit() {
   for (const listener of listeners) listener();
@@ -35,11 +38,9 @@ export function emptyRsvp(): RsvpRecord {
   };
 }
 
-export function readRsvp(): RsvpRecord | null {
-  if (typeof window === "undefined") return null;
+function parse(raw: string | null): RsvpRecord | null {
+  if (!raw) return null;
   try {
-    const raw = window.localStorage.getItem(RSVP_STORAGE_KEY);
-    if (!raw) return null;
     const parsed = JSON.parse(raw) as Partial<RsvpRecord>;
     if (!parsed.family || !parsed.interest) return null;
     return {
@@ -55,12 +56,29 @@ export function readRsvp(): RsvpRecord | null {
   }
 }
 
+export function readRsvp(): RsvpRecord | null {
+  if (typeof window === "undefined") return null;
+  const raw = window.localStorage.getItem(RSVP_STORAGE_KEY);
+  if (hydrated && raw === snapshotRaw) return snapshot;
+  hydrated = true;
+  snapshotRaw = raw;
+  snapshot = parse(raw);
+  return snapshot;
+}
+
 export function writeRsvp(record: RsvpRecord): void {
-  window.localStorage.setItem(RSVP_STORAGE_KEY, JSON.stringify(record));
+  const raw = JSON.stringify(record);
+  window.localStorage.setItem(RSVP_STORAGE_KEY, raw);
+  snapshotRaw = raw;
+  snapshot = record;
+  hydrated = true;
   emit();
 }
 
 export function clearRsvp(): void {
   window.localStorage.removeItem(RSVP_STORAGE_KEY);
+  snapshotRaw = null;
+  snapshot = null;
+  hydrated = true;
   emit();
 }

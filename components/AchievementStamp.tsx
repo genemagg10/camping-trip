@@ -30,30 +30,26 @@ export function AchievementStamp() {
   return (
     <div
       ref={mark}
-      className="achieve-stamp inline-flex size-[4.5rem] items-center justify-center rounded-full border-[3px] border-gold bg-gold/15 text-center"
+      className="achieve-stamp inline-flex size-16 shrink-0 items-center justify-center rounded-full bg-gold text-ink shadow-[0_4px_0_#b8860b]"
       aria-hidden
     >
-      <svg viewBox="0 0 64 64" className="size-12" aria-hidden>
+      <svg viewBox="0 0 64 64" className="size-10" aria-hidden>
         <path
-          d="M18 46 L30 14"
-          stroke="#1A2420"
-          strokeWidth="3.4"
-          strokeLinecap="round"
-        />
-        <path
-          d="M46 46 L34 14"
-          stroke="#1A2420"
-          strokeWidth="3.4"
-          strokeLinecap="round"
-        />
-        <path
-          d="M12 40c10 6 14 6 20 0s10-6 20 0"
+          d="M20 48 L32 14 L44 48"
           fill="none"
-          stroke="#E07A3D"
-          strokeWidth="3"
+          stroke="currentColor"
+          strokeWidth="4.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M14 38c10 7 12 7 18 0s8-7 18 0"
+          fill="none"
+          stroke="#2F4F3E"
+          strokeWidth="3.5"
           strokeLinecap="round"
         />
-        <rect x="26" y="10" width="12" height="7" rx="1.5" fill="#E6B422" />
+        <rect x="26" y="10" width="12" height="8" rx="2" fill="#1A2420" />
       </svg>
     </div>
   );
