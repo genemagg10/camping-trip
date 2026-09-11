@@ -20,9 +20,15 @@ export function SiteFooter() {
           </p>
         </div>
         <p className="max-w-sm sm:text-right">
-          {trip.holdLine} Photos from the outfitter’s public pages. They
-          certify the Cub Scout rafting patch (phone-confirmed). Achievement
-          stamp is den-made — not a BSA emblem.
+          {trip.holdLine} Photos from the outfitter’s public pages —{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://github.com/genemagg10/camping-trip/blob/main/SOURCE.md"
+          >
+            SOURCE cites
+          </a>
+          . They certify the Cub Scout rafting patch (phone-confirmed).
+          Achievement stamp is den-made — not a BSA emblem.
         </p>
       </div>
     </footer>

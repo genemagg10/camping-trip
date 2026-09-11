@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 /** Locked trip facts — do not invent different dates, prices, or itinerary. */
 export const trip = {
   den: "Arrow of Light den",
@@ -31,79 +33,79 @@ export const trip = {
 
 export const photos = {
   hero: {
-    src: "/photos/satans-cesspool.jpg",
+    src: asset("/photos/satans-cesspool.jpg"),
     alt: "A Whitewater Excitement raft punching through a splashy South Fork rapid",
     width: 2048,
     height: 1360,
   },
   scouts: {
-    src: "/photos/scout-group.jpg",
+    src: asset("/photos/scout-group.jpg"),
     alt: "A youth group in helmets and life jackets, paddles up, ready for the river",
     width: 2048,
     height: 1536,
   },
   family: {
-    src: "/photos/family-raft.jpg",
+    src: asset("/photos/family-raft.jpg"),
     alt: "A smiling family in yellow life jackets on a calm stretch of river",
     width: 2048,
     height: 1365,
   },
   halfDay: {
-    src: "/photos/half-day-raft.jpg",
+    src: asset("/photos/half-day-raft.jpg"),
     alt: "Guides and guests paddling a blue raft through whitewater",
     width: 2048,
     height: 1360,
   },
   chiliBar: {
-    src: "/photos/chili-bar.jpg",
+    src: asset("/photos/chili-bar.jpg"),
     alt: "A raft crew working a lively rapid on the American River",
     width: 1800,
     height: 1196,
   },
   wholeRiver: {
-    src: "/photos/whole-river.jpg",
+    src: asset("/photos/whole-river.jpg"),
     alt: "Paddles high as a Whitewater Excitement raft drops into a rapid",
     width: 2548,
     height: 1699,
   },
   riverLine: {
-    src: "/photos/river-portrait.jpg",
+    src: asset("/photos/river-portrait.jpg"),
     alt: "A line of blue rafts running whitewater on the South Fork",
     width: 1800,
     height: 1196,
   },
   tents: {
-    src: "/photos/cabin-tents.jpg",
+    src: asset("/photos/cabin-tents.jpg"),
     alt: "Canvas cabin tents under oak shade at the private riverside camp",
     width: 1350,
     height: 1800,
   },
   dining: {
-    src: "/photos/dining-area.jpg",
+    src: asset("/photos/dining-area.jpg"),
     alt: "Picnic tables under a dining canopy at camp",
     width: 1800,
     height: 1350,
   },
   tentInside: {
-    src: "/photos/camp-scene.jpg",
+    src: asset("/photos/camp-scene.jpg"),
     alt: "Inside a platform tent: wood bunks and a made bed",
     width: 1800,
     height: 1350,
   },
   riversideTent: {
-    src: "/photos/two-day.jpg",
+    src: asset("/photos/two-day.jpg"),
     alt: "Two campers sitting by a tent on the grassy riverbank",
     width: 2048,
     height: 1536,
   },
   riverView: {
-    src: "/photos/river-view.jpg",
+    src: asset("/photos/river-view.jpg"),
     alt: "Morning light on the South Fork American River from camp",
     width: 1350,
     height: 1800,
   },
   gear: {
-    src: "/photos/gear.jpg",
+    src: asset("/photos/gear.jpg"),
     alt: "Rafts, paddles, and river gear staged at the outfitter",
     width: 2048,
     height: 1536,

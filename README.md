@@ -19,9 +19,17 @@ the South Fork American River with
 
 Photo credits and source URLs live in [`SOURCE.md`](./SOURCE.md).
 
+## Live
+
+Public pitch (GitHub Pages):
+[https://genemagg10.github.io/camping-trip/](https://genemagg10.github.io/camping-trip/)
+
+Deploys from `main` via `.github/workflows/pages.yml` (static `next export`).
+
 ## Stack
 
-Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · Vercel-ready.
+Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · static export for
+GitHub Pages.
 
 Interest RSVP is local-only (`localStorage`). No backend.
 
@@ -36,14 +44,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 npm run build
-npm start
 ```
 
-## Deploy on Vercel
-
-Import the GitHub repo at [vercel.com/new](https://vercel.com/new). Framework
-preset: Next.js. Default build (`next build`) and output are fine — no extra
-env vars.
+`next start` is not used — the production build is a static `out/` folder.
+The Pages workflow sets `GITHUB_PAGES=true` so assets use the
+`/camping-trip` base path.
 
 ## Design notes
 
