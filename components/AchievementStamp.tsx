@@ -52,8 +52,8 @@ export function AchievementStamp() {
         />
         <rect x="26" y="8" width="12" height="8" rx="2" fill="var(--ink)" />
       </svg>
-      <span className="font-display text-[0.42rem] font-extrabold tracking-[0.14em] uppercase">
-        Earn
+      <span className="font-display text-[0.55rem] tracking-[0.08em] uppercase">
+        Earn!
       </span>
     </div>
   );

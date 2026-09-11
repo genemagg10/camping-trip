@@ -43,7 +43,7 @@ export function RiverBand() {
         {frames.map((photo, i) => (
           <figure
             key={photo.src}
-            className="relative h-44 w-[72vw] shrink-0 overflow-hidden rounded-xl bg-sky sm:h-56 sm:w-[34vw]"
+            className="comic-panel relative h-44 w-[72vw] shrink-0 overflow-hidden rounded-xl bg-sky sm:h-56 sm:w-[34vw]"
             style={{
               transform: `translateY(calc(var(--band-drift, 0px) * ${i % 2 === 0 ? 1 : -0.65}))`,
             }}
