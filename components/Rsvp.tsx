@@ -36,7 +36,7 @@ export function Rsvp() {
 
   return (
     <section id="rsvp" className="mx-auto w-full max-w-xl px-4 py-12 sm:px-6">
-      <h2 className="section-shout font-display text-3xl tracking-wide text-river uppercase">
+      <h2 className="text-xl font-bold tracking-wide text-river uppercase">
         Who&apos;s in?
       </h2>
       <p className="mt-2 text-[1.02rem] leading-relaxed text-ink/80">
@@ -46,7 +46,7 @@ export function Rsvp() {
 
       {saved ? (
         <div className="mt-5 rounded-xl bg-mist px-4 py-4">
-          <p className="font-display text-2xl text-forest uppercase">
+          <p className="text-xl font-bold text-forest uppercase">
             {labels[saved.interest]} — {saved.family}
           </p>
           <p className="mt-1 text-sm text-ink/75">
