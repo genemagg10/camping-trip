@@ -24,7 +24,18 @@ Photo credits and source URLs live in [`SOURCE.md`](./SOURCE.md).
 Public pitch (GitHub Pages):
 [https://genemagg10.github.io/camping-trip/](https://genemagg10.github.io/camping-trip/)
 
-Deploys from `main` via `.github/workflows/pages.yml` (static `next export`).
+Public URL is GitHub Pages from **`main` `/`** (already enabled).
+A static export is committed at the repo root (`index.html`, `_next/`,
+`photos/`, `.nojekyll`) so Jekyll is skipped and the pitch loads.
+
+Refresh those files after source edits:
+
+```bash
+GITHUB_PAGES=true npm run build
+./scripts/publish-pages.sh
+```
+
+`.github/workflows/pages.yml` is ready if Pages is later switched to Actions.
 
 ## Stack
 
