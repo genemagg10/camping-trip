@@ -10,10 +10,10 @@ import {
   type Interest,
   type RsvpRecord,
 } from "@/lib/rsvp";
-import { trip } from "@/lib/trip";
+import { copy } from "@/lib/copy";
 
 const labels: Record<Interest, string> = {
-  in: "I'm interested",
+  in: copy.rsvp.cta,
   maybe: "Leaning yes",
   out: "Not this time",
 };
@@ -37,11 +37,10 @@ export function Rsvp() {
   return (
     <section id="rsvp" className="mx-auto w-full max-w-xl px-4 py-12 sm:px-6">
       <h2 className="text-xl font-bold tracking-wide text-river uppercase">
-        Who&apos;s in?
+        {copy.rsvp.title}
       </h2>
       <p className="mt-2 text-[1.02rem] leading-relaxed text-ink/80">
-        Raise a hand. {trip.holdLine} Saved in this browser only — not a
-        booking.
+        {copy.rsvp.body}
       </p>
 
       {saved ? (

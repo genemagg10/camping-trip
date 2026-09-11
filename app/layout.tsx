@@ -16,11 +16,11 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Last camping trip of the year! · Arrow of Light den",
   description:
-    "Den sales pitch: Arrow of Light rafting + camp weekend, Fri Apr 23 – Sun Apr 25, Whitewater Excitement on the South Fork American River. Sat 9am Cub Scout rafting patch, then ~14 miles + lunch. Soft hold only — Scout + Dad ≈ $327.",
+    "Arrow of Light den · Dads and Scouts. Last overnight before Scouts BSA — Fri Apr 23 – Sun Apr 25 at Whitewater Excitement, Lotus, CA. Cub Scout rafting patch Saturday, then ~14 miles. Soft hold only · about $327 for Scout + Dad.",
   openGraph: {
     title: "Last camping trip of the year! · Arrow of Light den",
     description:
-      "Hit the river. Fri Apr 23 – Sun Apr 25 · Lotus, CA · Cub Scout rafting patch, then ~14 miles. Soft hold. Scout + Dad ≈ $327.",
+      "South Fork American River · Whitewater Excitement, Lotus, CA · Fri Apr 23 – Sun Apr 25. Soft hold only · about $327 for Scout + Dad.",
     type: "website",
   },
 };
