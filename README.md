@@ -83,6 +83,11 @@ halves sit side by side. The patch beat shows the real Whitewater
 Rafting emblem they award (Gene override for this asset only). Do not
 invent other BSA / Cub badge art.
 
+**PATCH_ASSET_V1** — the real Whitewater Rafting emblem
+(`public/photos/wwe-whitewater-rafting-patch.png`) is the large
+hero-adjacent patch visual: full merrow, contained in a square frame
+with even padding. Den-made EARN IT is a small motion accent only.
+
 **WHY_THIS_TRIP_V1** — Gene locked the three Why this trip paragraphs
 verbatim in `lib/copy.ts`. Do not paraphrase.
 
