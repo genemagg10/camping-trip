@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, type RefObject } from "react";
 import { AchievementStamp } from "@/components/AchievementStamp";
+import { copy } from "@/lib/copy";
 import { photos, trip } from "@/lib/trip";
 
 const thumbs = [
@@ -12,19 +13,6 @@ const thumbs = [
 ] as const;
 
 const wideThumbs = [photos.riverView, photos.halfDay] as const;
-
-const stackBullets = [
-  "Private river camp · hot showers",
-  "Sat 9am: earn the Cub Scout rafting patch, then smash ~14 miles + lunch",
-  `Soft hold · ~$${trip.scoutDadApprox} Scout + Dad`,
-] as const;
-
-const spreadPlan = [
-  "Pitch the tents at the private river camp — bathrooms, hot showers, fire rings.",
-  "Sat 9am: Cub Scout rafting patch lesson. They certify and award it. Then ~14 miles + lunch.",
-  "Splash. Paddle. Campfire. Not a corporate BSA flyer.",
-  "Soft hold only — nothing booked until the den says go.",
-] as const;
 
 function useCtaPulse(ref: RefObject<HTMLAnchorElement | null>) {
   useEffect(() => {
@@ -98,15 +86,17 @@ export function Postcard() {
           <div className="hero-copy">
             <div className="hero-title-block">
               <h1 className="hero-shout tracking-[0.02em] text-foam uppercase">
-                Last camping trip of the year!
+                {copy.hero.shout}
               </h1>
               <p className="hero-den text-foam uppercase">
-                Arrow of Light den
+                {copy.hero.den}
               </p>
               <p className="hero-meta text-foam/90">
-                {trip.river}
+                {copy.hero.river}
                 <br />
-                {trip.dates}
+                {copy.hero.place}
+                <br />
+                {copy.hero.dates}
               </p>
             </div>
             <a
@@ -114,11 +104,9 @@ export function Postcard() {
               href="#rsvp"
               className="hero-cta inline-flex w-fit shrink-0 items-center rounded-full bg-gold px-6 text-base font-bold text-ink"
             >
-              I&apos;m interested
+              {copy.hero.cta}
             </a>
-            <p className="hero-hold text-foam">
-              Soft hold · ~${trip.scoutDadApprox} Scout + Dad
-            </p>
+            <p className="hero-hold text-foam">{copy.hero.hold}</p>
           </div>
         </div>
       </div>
@@ -178,27 +166,19 @@ export function Postcard() {
             ))}
           </ul>
 
-          <ul className="grid gap-2 text-[1.02rem] leading-snug lg:hidden">
-            {stackBullets.map((line) => (
-              <li key={line} className="flex gap-2">
-                <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
-                <span className="min-w-0 text-pretty">{line}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="hidden min-w-0 lg:block">
+          <div className="min-w-0">
             <h2 className="text-xl font-bold tracking-wide text-river uppercase">
-              The plan
+              {copy.why.title}
             </h2>
-            <ul className="mt-3 grid gap-2 text-[1.02rem] leading-snug">
-              {spreadPlan.map((line) => (
-                <li key={line} className="flex gap-2">
-                  <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
-                  <span className="min-w-0 text-pretty">{line}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
+              {copy.hero.paragraph}
+            </p>
+            <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
+              {copy.why.body}
+            </p>
+            <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty text-ink/80">
+              {copy.cost}
+            </p>
           </div>
 
           <div className="mt-auto flex items-center gap-3">

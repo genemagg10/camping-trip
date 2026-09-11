@@ -9,16 +9,16 @@ export const trip = {
   camp: "private campground (bathrooms + hot showers)",
   dates: "Fri Apr 23 – Sun Apr 25",
   holdLine:
-    "Soft hold only — nothing is committed. This page gauges den interest.",
-  friday: "Arrive, tent camp, easy dinner (own gear / own food).",
+    "Soft hold only — about $327 for Scout + Dad, nothing booked until the den says go.",
+  friday: "Arrive & settle at the private river camp; easy dinner the den brings and shares; Paracord River Lanyards after dinner.",
   saturdayMorning:
     "Sat 9am Cub Scout rafting patch lesson; they certify/award the Cub Scout rafting patch, then ~14 miles of rafting + lunch.",
   saturdayRiver: "Then ~14 miles of rafting + lunch.",
-  saturdayNight: "Camp dinner.",
+  saturdayNight: "Passing the Paddle ceremony and Time Capsule Letters at the campfire.",
   patchClaim:
     "Whitewater Excitement certifies and awards the Cub Scout rafting patch (phone-confirmed; their public site lists troop Merit Badge).",
   patchBeat: "Earn the Cub Scout rafting patch.",
-  sunday: "Breakfast, pack, home.",
+  sunday: "Breakfast, Micro-Trash Scavenger Hunt, pack, home.",
   campPerPersonNight: 15,
   campNights: 2,
   scoutRaft: 129,
