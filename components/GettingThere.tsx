@@ -14,7 +14,8 @@ export function GettingThere() {
             className="getting-map-frame"
             title={copy.gettingThere.frameTitle}
             src={trip.osmEmbed}
-            loading="lazy"
+            width={800}
+            height={360}
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
