@@ -117,4 +117,10 @@ export const photos = {
     width: 2048,
     height: 1536,
   },
+  patch: {
+    src: asset("/photos/wwe-rafting-patch.png"),
+    alt: "The Whitewater Rafting patch Whitewater Excitement certifies and awards — circular emblem with paddles, raft, and fleur-de-lis",
+    width: 1200,
+    height: 1200,
+  },
 } as const;

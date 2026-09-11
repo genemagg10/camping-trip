@@ -1,14 +1,25 @@
-import { AchievementStamp } from "@/components/AchievementStamp";
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { copy } from "@/lib/copy";
+import { photos } from "@/lib/trip";
 
 const beats = [copy.patch.lesson, copy.patch.award, copy.patch.river] as const;
 
 export function PatchBeat() {
   return (
     <section id="patch" className="patch-beat">
-      <Reveal className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:gap-8 sm:px-6">
-        <AchievementStamp size="lg" />
+      <Reveal className="patch-beat-inner mx-auto w-full min-w-0 max-w-6xl px-4 py-10 sm:px-6">
+        <figure className="patch-photo">
+          <Image
+            src={photos.patch.src}
+            alt={photos.patch.alt}
+            width={photos.patch.width}
+            height={photos.patch.height}
+            className="patch-photo-img"
+            sizes="(min-width: 640px) 22rem, 86vw"
+            priority
+          />
+        </figure>
         <div className="min-w-0">
           <p className="patch-kicker">{copy.patch.kicker}</p>
           <h2 className="patch-title mt-1 font-bold tracking-wide text-river uppercase">

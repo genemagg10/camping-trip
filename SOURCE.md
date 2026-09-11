@@ -65,11 +65,21 @@ back to `family-raft.jpg` (option 2). Same Hot Shot Imaging Chili Bar run as
 
 ## Original artwork
 
-`app/icon.svg` and the on-page achievement stamp are original den-flyer
-art (paddles + wave). They are not official Boy Scouts of America or Cub
-Scout trademarks, and they do not depict official Cub or Merit Badge art.
+`app/icon.svg` is original den-flyer art (paddles + wave). Do not invent
+other BSA / Cub badge chrome.
+
+## Real patch photo (Gene override)
+
+`public/photos/wwe-rafting-patch.png` is the real Whitewater Rafting
+patch Whitewater Excitement certifies and awards. Gene supplied this
+asset and overrode the “no BSA art” lock for this file only — the
+fleur-de-lis is on the actual emblem. Do not invent additional badge
+art.
+
+Catalog still of the same emblem (Scout Shop SKU 662791 / BIN 641565):
+https://www.scoutshop.org/media/catalog/product/6/6/662791_bsa_whitewater_rafting_emblem.jpg
 
 The Cub Scout rafting-patch claim on the pitch is phone-confirmed with
 Whitewater Excitement. Their public scouting page advertises Whitewater
 Merit Badge for troops, not the Cub patch — that gap is why the copy
-names the phone confirm and why we do not invent badge chrome.
+names the phone confirm.

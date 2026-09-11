@@ -28,7 +28,7 @@ export function SiteFooter() {
             SOURCE cites
           </a>
           . They certify the Cub Scout rafting patch (phone-confirmed).
-          Achievement stamp is den-made — not a BSA emblem.
+          Patch photo is the real Whitewater Rafting emblem they award.
         </p>
       </div>
     </footer>

@@ -210,6 +210,38 @@ h3 {
   border-block: 4px solid var(--patch-gold);
 }
 
+.patch-beat-inner {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .patch-beat-inner {
+    grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+    gap: 2.25rem;
+  }
+}
+
+/* Real WWE-awarded Whitewater Rafting patch — full merrow, even pad, on black. */
+.patch-photo {
+  margin: 0 auto;
+  width: min(100%, 22rem);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 8%;
+  background: #000;
+}
+
+.patch-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
 .patch-kicker {
   font-size: 0.82rem;
   font-weight: 800;

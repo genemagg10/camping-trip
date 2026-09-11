@@ -25,7 +25,7 @@ export const copy = {
     award: `${trip.outfitter} certifies and awards the Cub Scout rafting patch.`,
     river: "Then about fourteen miles on the South Fork — plus lunch.",
     honest:
-      "Phone-confirmed with the outfitter. Their public site lists the troop Merit Badge. This EARN IT stamp is den-made — not BSA or Cub badge art.",
+      "This is the Whitewater Rafting patch Whitewater Excitement certifies and awards. Phone-confirmed with the outfitter. Their public site lists the troop Merit Badge.",
   },
   logistics: {
     title: "Logistics & costs",

@@ -67,8 +67,7 @@ Dieter postcard tokens v1.1 (photo truth) are locked in `app/globals.css`
 (`:root` + Tailwind `@theme`): foam `#F4F7F5`, river `#1F6F8B` (headlines +
 active day tab — not Florida teal), raft cyan `#2896D2` (boat / action
 accent), sky `#7EC8E3`, forest `#2F4F3E`, ink `#1A2420`, paddle gold
-`#E6B422` (hero CTA + achievement stamp + schedule rail — not Cub
-insignia), ember `#E07A3D`, mist `#D7E4EA`.
+`#E6B422` (hero CTA + schedule rail), ember `#E07A3D`, mist `#D7E4EA`.
 
 Hero type is fluid (`clamp`) with safe padding so the shout, gold CTA,
 and soft-hold line wrap instead of clipping from phone through wide.
@@ -80,8 +79,9 @@ button. **HERO_FOCAL_V1** keeps the yellow-helmet Cub + raft crew as the
 optical center (`object-fit: cover` + near-center). Do not pan-crop to
 clear type. No Soft Hold corner chip. No teal body CTA. No booking button.
 Below 1024px the plan/camp half scrolls under that hero; from 1024px the
-halves sit side by side. The achievement stamp is a den-made paddle mark
-for the Cub Scout rafting-patch earn — not BSA insignia.
+halves sit side by side. The patch beat shows the real Whitewater
+Rafting emblem they award (Gene override for this asset only). Do not
+invent other BSA / Cub badge art.
 
 **WHY_THIS_TRIP_V1** — Gene locked the three Why this trip paragraphs
 verbatim in `lib/copy.ts`. Do not paraphrase.
