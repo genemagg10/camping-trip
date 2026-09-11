@@ -10,6 +10,18 @@ family boats, splashy South Fork runs, canvas camp) matches Whitewater
 Excitement’s public library. Those frames were pulled from the live site
 because the attachment copies were not on disk in this workspace.
 
+## Locked main hero (Gene option 1)
+
+`public/photos/hero-yellow-helmet.jpg` is the locked main-hero still: Cub-age
+paddler in the yellow helmet on the right of a splashy Whitewater Excitement
+raft. Gene selected this WWE action frame (option 1) — do not swap the hero
+back to `family-raft.jpg` (option 2). Same Hot Shot Imaging Chili Bar run as
+`chili-bar.jpg`; hero file is the full 3216×2136 original.
+
+| Local file | Source URL | Page context |
+| --- | --- | --- |
+| `public/photos/hero-yellow-helmet.jpg` | https://whitewaterexcitement.com/wp-content/uploads/2016/12/08-18-2019_SFA_CB_WWE_I00020014.jpg | WWE action photo from Gene — locked hero option 1 (Cub kid, yellow helmet) |
+
 ## Files and source URLs
 
 | Local file | Source URL | Page context |

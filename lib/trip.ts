@@ -32,6 +32,12 @@ export const trip = {
 } as const;
 
 export const photos = {
+  heroYellow: {
+    src: asset("/photos/hero-yellow-helmet.jpg"),
+    alt: "A Cub-age paddler in a yellow helmet riding the right side of a Whitewater Excitement raft through a splashy South Fork rapid",
+    width: 3216,
+    height: 2136,
+  },
   hero: {
     src: asset("/photos/satans-cesspool.jpg"),
     alt: "A Whitewater Excitement raft punching through a splashy South Fork rapid",

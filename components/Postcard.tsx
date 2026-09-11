@@ -15,15 +15,15 @@ const wideThumbs = [photos.riverView, photos.halfDay] as const;
 
 const stackBullets = [
   "Private river camp · hot showers",
-  "Sat 9am Cub Scout rafting patch, then ~14 miles + lunch",
-  `~$${trip.scoutDadApprox} Scout + Dad (soft hold)`,
+  "Sat 9am: earn the Cub Scout rafting patch, then smash ~14 miles + lunch",
+  `Soft hold · ~$${trip.scoutDadApprox} Scout + Dad`,
 ] as const;
 
 const spreadPlan = [
-  "Private river camp — bathrooms, hot showers, fire rings.",
-  "Sat 9am Cub Scout rafting patch lesson — they certify/award it — then ~14 miles + lunch.",
-  "Colour action. Warm dad energy. Not a corporate BSA flyer.",
-  "Interest only — nothing booked until the den says go.",
+  "Pitch the tents at the private river camp — bathrooms, hot showers, fire rings.",
+  "Sat 9am: Cub Scout rafting patch lesson. They certify and award it. Then ~14 miles + lunch.",
+  "Splash. Paddle. Campfire. Not a corporate BSA flyer.",
+  "Soft hold only — nothing booked until the den says go.",
 ] as const;
 
 function useCtaPulse(ref: RefObject<HTMLAnchorElement | null>) {
@@ -84,23 +84,26 @@ export function Postcard() {
       >
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src={photos.family.src}
-            alt={photos.family.alt}
+            src={photos.heroYellow.src}
+            alt={photos.heroYellow.alt}
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[center_20%]"
+            className="object-cover object-[78%_42%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/15 to-transparent" />
+          <div className="hero-scrim absolute inset-0" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 shimmer" />
         </div>
         <div className="hero-pad relative z-10 flex min-h-[28rem] flex-col justify-end lg:min-h-svh">
           <div className="hero-copy">
             <div className="hero-title-block">
-              <h1 className="hero-shout font-display font-extrabold tracking-[0.02em] text-foam uppercase">
-                Last camping trip of the year
+              <p className="hero-burst font-display uppercase">Hit the river</p>
+              <h1 className="hero-shout font-display tracking-[0.02em] text-foam uppercase">
+                Last camping trip of the year!
               </h1>
-              <p className="hero-den text-foam/95">Arrow of Light den</p>
+              <p className="hero-den font-display text-foam uppercase">
+                Arrow of Light den
+              </p>
               <p className="hero-meta text-foam/90">
                 {trip.river}
                 <br />
@@ -142,7 +145,7 @@ export function Postcard() {
           <ul className="grid grid-cols-3 gap-2 lg:hidden">
             {thumbs.map((item) => (
               <li key={item.label} className="min-w-0">
-                <figure className="overflow-hidden rounded-lg bg-mist ring-2 ring-raft/35">
+                <figure className="comic-panel overflow-hidden rounded-lg bg-mist">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={item.photo.src}
@@ -163,7 +166,7 @@ export function Postcard() {
           <ul className="hidden min-w-0 grid-cols-2 gap-3 lg:grid">
             {wideThumbs.map((photo) => (
               <li key={photo.src} className="min-w-0">
-                <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-mist ring-2 ring-raft/35">
+                <div className="comic-panel relative aspect-[16/10] overflow-hidden rounded-lg bg-mist">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
@@ -186,7 +189,7 @@ export function Postcard() {
           </ul>
 
           <div className="hidden min-w-0 lg:block">
-            <h2 className="font-display text-2xl font-bold tracking-wide text-river uppercase">
+            <h2 className="section-shout font-display text-3xl tracking-wide text-river uppercase">
               The plan
             </h2>
             <ul className="mt-3 grid gap-2 text-[1.02rem] leading-snug">
@@ -202,7 +205,7 @@ export function Postcard() {
           <div className="mt-auto flex items-center gap-3">
             <AchievementStamp />
             <p className="text-sm leading-snug text-ink">
-              <span className="font-display text-base font-bold tracking-wide text-ink uppercase">
+              <span className="font-display text-lg tracking-wide text-ink uppercase">
                 {trip.patchBeat}
               </span>
               <span className="mt-0.5 block text-xs text-ink/65">

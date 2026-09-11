@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Source_Sans_3 } from "next/font/google";
+import { Bangers, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const display = Barlow_Condensed({
+const display = Bangers({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "400",
   variable: "--font-display",
 });
 
@@ -14,13 +14,13 @@ const body = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Last camping trip of the year · Arrow of Light den",
+  title: "Last camping trip of the year! · Arrow of Light den",
   description:
-    "Den pitch for a soft-hold Arrow of Light rafting + camp weekend, Fri Apr 23 – Sun Apr 25, with Whitewater Excitement on the South Fork American River. Sat 9am Cub Scout rafting patch, then ~14 miles + lunch. Interest only — nothing booked.",
+    "Den sales pitch: Arrow of Light rafting + camp weekend, Fri Apr 23 – Sun Apr 25, Whitewater Excitement on the South Fork American River. Sat 9am Cub Scout rafting patch, then ~14 miles + lunch. Soft hold only — Scout + Dad ≈ $327.",
   openGraph: {
-    title: "Last camping trip of the year · Arrow of Light den",
+    title: "Last camping trip of the year! · Arrow of Light den",
     description:
-      "Fri Apr 23 – Sun Apr 25 · Lotus, CA · ~14 miles on the South Fork, two nights at the private campground. Soft hold only. Scout + Dad ≈ $327.",
+      "Hit the river. Fri Apr 23 – Sun Apr 25 · Lotus, CA · Cub Scout rafting patch, then ~14 miles. Soft hold. Scout + Dad ≈ $327.",
     type: "website",
   },
 };
