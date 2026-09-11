@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { photos } from "@/lib/trip";
 
-const frames = [photos.chiliBar, photos.family, photos.wholeRiver] as const;
+const frames = [photos.wholeRiver, photos.chiliBar, photos.family] as const;
 
 export function RiverBand() {
   const band = useRef<HTMLDivElement>(null);
