@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Paddle stamp">
+  <rect width="64" height="64" rx="14" fill="#1F6F8B"/>
+  <path d="M22 46 L32 16" stroke="#F4F7F5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M42 46 L32 16" stroke="#F4F7F5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M14 40c10 6 14 6 18 0s8-6 18 0" fill="none" stroke="#E07A3D" stroke-width="3.2" stroke-linecap="round"/>
+  <rect x="26" y="12" width="12" height="7" rx="1.5" fill="#E6B422"/>
+</svg>
