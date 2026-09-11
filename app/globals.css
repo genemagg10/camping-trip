@@ -71,7 +71,7 @@ h3,
 }
 
 .hero-title-block {
-  max-width: min(90%, 36ch);
+  max-width: min(82%, 32ch);
 }
 
 .hero-burst {
@@ -122,7 +122,9 @@ h3,
   min-height: 44px;
   min-width: 44px;
   border: 2px solid var(--ink);
-  box-shadow: 3px 3px 0 var(--ink);
+  box-shadow:
+    0 0 0 6px rgb(26 36 32 / 0.55),
+    3px 3px 0 var(--ink);
 }
 
 .hero-hold {
@@ -135,17 +137,17 @@ h3,
 .hero-scrim {
   background:
     linear-gradient(
-      90deg,
-      rgb(26 36 32 / 0.82) 0%,
-      rgb(26 36 32 / 0.48) 36%,
-      rgb(26 36 32 / 0.12) 58%,
-      transparent 76%
+      105deg,
+      rgb(26 36 32 / 0.9) 0%,
+      rgb(26 36 32 / 0.68) 26%,
+      rgb(26 36 32 / 0.28) 46%,
+      transparent 66%
     ),
     linear-gradient(
       180deg,
-      transparent 22%,
-      rgb(26 36 32 / 0.2) 56%,
-      rgb(26 36 32 / 0.74) 100%
+      transparent 16%,
+      rgb(26 36 32 / 0.32) 50%,
+      rgb(26 36 32 / 0.86) 100%
     );
 }
 
@@ -181,7 +183,7 @@ h3,
 
 @media (min-width: 1024px) {
   .hero-title-block {
-    max-width: min(88%, 34ch);
+    max-width: min(78%, 30ch);
   }
 
   .hero-shout {
