@@ -55,4 +55,9 @@ because the attachment copies were not on disk in this workspace.
 
 `app/icon.svg` and the on-page achievement stamp are original den-flyer
 art (paddles + wave). They are not official Boy Scouts of America or Cub
-Scout trademarks, and they do not depict a named Cub or Merit Badge.
+Scout trademarks, and they do not depict official Cub or Merit Badge art.
+
+The Cub Scout rafting-patch claim on the pitch is phone-confirmed with
+Whitewater Excitement. Their public scouting page advertises Whitewater
+Merit Badge for troops, not the Cub patch — that gap is why the copy
+names the phone confirm and why we do not invent badge chrome.

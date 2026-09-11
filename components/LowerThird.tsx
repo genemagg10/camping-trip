@@ -10,7 +10,7 @@ const days = [
   {
     day: "Sat",
     date: "Apr 24",
-    line: "On the water, then ~14 miles + lunch. Back to camp.",
+    line: "Sat 9am Cub Scout rafting patch lesson — they certify it — then ~14 miles + lunch.",
   },
   {
     day: "Sun",

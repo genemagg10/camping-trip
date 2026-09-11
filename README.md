@@ -10,7 +10,7 @@ the South Fork American River with
 
 - **When:** Fri Apr 23 – Sun Apr 25
 - **Where:** Whitewater Excitement private campground (bathrooms + hot showers) · South Fork American River
-- **Highlight:** Saturday on the water, then ~14 miles of rafting + lunch. Named Cub rafting-patch copy is held until Gene confirms.
+- **Highlight:** Sat 9am Cub Scout rafting patch lesson; they certify/award the Cub Scout rafting patch, then ~14 miles of rafting + lunch. Phone-confirmed (their public site lists troop Merit Badge). No official BSA / Cub insignia art — paddle-gold stamp only.
 - **Ballpark:** Scout + Dad ≈ **$327** (raft + lunch + 2 nights camp)
   - Camp $15/person/night × 2 nights
   - Scout raft $129 · adult raft $138
@@ -55,5 +55,5 @@ only — not Cub insignia), ember `#E07A3D`, mist `#D7E4EA`.
 
 Mobile locks to still A (soft-hold chip, hero shout, three thumbs, ember
 bullets, river CTA). From 1024px the postcard is still B’s full-bleed
-spread. The achievement stamp is a den-made paddle mark, not BSA insignia.
-Named Cub Scout rafting-patch copy is held.
+spread. The achievement stamp is a den-made paddle mark for the Cub Scout
+rafting-patch earn — not BSA insignia.

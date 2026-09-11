@@ -9,9 +9,13 @@ export const trip = {
   holdLine:
     "Soft hold only — nothing is committed. This page gauges den interest.",
   friday: "Arrive, tent camp, easy dinner (own gear / own food).",
-  saturdayMorning: "Saturday morning on the water, then ~14 miles of rafting + lunch.",
+  saturdayMorning:
+    "Sat 9am Cub Scout rafting patch lesson; they certify/award the Cub Scout rafting patch, then ~14 miles of rafting + lunch.",
   saturdayRiver: "Then ~14 miles of rafting + lunch.",
   saturdayNight: "Camp dinner.",
+  patchClaim:
+    "Whitewater Excitement certifies and awards the Cub Scout rafting patch (phone-confirmed; their public site lists troop Merit Badge).",
+  patchBeat: "Earn the Cub Scout rafting patch.",
   sunday: "Breakfast, pack, home.",
   campPerPersonNight: 15,
   campNights: 2,

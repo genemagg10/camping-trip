@@ -15,7 +15,7 @@ const wideThumbs = [photos.riverView, photos.halfDay] as const;
 
 const bullets = [
   "Private river camp · hot showers",
-  "Sat: morning on the water + lunch",
+  "Sat 9am Cub Scout rafting patch, then ~14 miles + lunch",
   `~$${trip.scoutDadApprox} Scout + Dad (soft hold)`,
 ] as const;
 
@@ -157,8 +157,13 @@ export function Postcard() {
           <p className="text-sm text-forest">Gauge only. Nothing booked yet.</p>
           <div className="flex items-center gap-3">
             <AchievementStamp />
-            <p className="text-xs text-ink/60">
-              A · Postcard. No Cub patch chrome.
+            <p className="text-sm leading-snug text-ink">
+              <span className="font-display text-base font-bold tracking-wide text-ink uppercase">
+                {trip.patchBeat}
+              </span>
+              <span className="mt-0.5 block text-xs text-ink/65">
+                They certify and award it. This stamp is ours — not BSA art.
+              </span>
             </p>
           </div>
         </div>
@@ -235,7 +240,10 @@ export function Postcard() {
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
-                  <span>Saturday morning on the water, then a long river day + lunch.</span>
+                  <span>
+                    Sat 9am Cub Scout rafting patch lesson — they certify/award
+                    it — then ~14 miles + lunch.
+                  </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1.5 size-2 shrink-0 rounded-full bg-ember" />
@@ -249,8 +257,13 @@ export function Postcard() {
             </div>
             <div className="mt-auto flex items-center gap-3">
               <AchievementStamp />
-              <p className="text-sm text-forest">
-                B · Wide postcard. Patch claim open — no fake Cub chrome.
+              <p className="text-sm leading-snug text-ink">
+                <span className="font-display text-base font-bold tracking-wide text-ink uppercase">
+                  {trip.patchBeat}
+                </span>
+                <span className="mt-0.5 block text-xs text-forest">
+                  They certify and award it. This stamp is ours — not BSA art.
+                </span>
               </p>
             </div>
           </div>

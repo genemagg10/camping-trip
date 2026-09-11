@@ -16,7 +16,7 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Last camping trip of the year · Arrow of Light den",
   description:
-    "Den pitch for a soft-hold Arrow of Light rafting + camp weekend, Fri Apr 23 – Sun Apr 25, with Whitewater Excitement on the South Fork American River. Interest only — nothing booked.",
+    "Den pitch for a soft-hold Arrow of Light rafting + camp weekend, Fri Apr 23 – Sun Apr 25, with Whitewater Excitement on the South Fork American River. Sat 9am Cub Scout rafting patch, then ~14 miles + lunch. Interest only — nothing booked.",
   openGraph: {
     title: "Last camping trip of the year · Arrow of Light den",
     description:
