@@ -4,7 +4,7 @@ Warm dad postcard pitch for an Arrow of Light den rafting + camp weekend on
 the South Fork American River with
 [Whitewater Excitement](https://whitewaterexcitement.com) (Lotus, CA).
 
-**Soft hold only** — nothing is booked yet. This site gauges family interest.
+**Soft hold only** — nothing is booked yet. No RSVP form. Dream CTA sells the Cub rafting patch.
 
 ## Trip (locked)
 
@@ -14,7 +14,7 @@ the South Fork American River with
 - **Ballpark:** Scout + Dad ≈ **$327** (raft + lunch + 2 nights camp)
   - Camp $15/person/night × 2 nights
   - Scout raft $129 · adult raft $138
-- **Meals:** Families still share meals and snacks. Friday dinner is own gear / own food.
+- **Meals:** Breakfast and dinner planned as a group. WWE provides lunch on the rafting trip.
 - **Outfitter:** [whitewaterexcitement.com](https://whitewaterexcitement.com) · 800.750.2386 · Lotus, CA
 
 Photo credits and source URLs live in [`SOURCE.md`](./SOURCE.md).
@@ -42,7 +42,7 @@ GITHUB_PAGES=true npm run build
 Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · static export for
 GitHub Pages.
 
-Interest RSVP is local-only (`localStorage`). No backend.
+No RSVP / localStorage interest form. Soft hold is prose only.
 
 ## Run
 
@@ -67,22 +67,32 @@ Dieter postcard tokens v1.1 (photo truth) are locked in `app/globals.css`
 (`:root` + Tailwind `@theme`): foam `#F4F7F5`, river `#1F6F8B` (headlines +
 active day tab — not Florida teal), raft cyan `#2896D2` (boat / action
 accent), sky `#7EC8E3`, forest `#2F4F3E`, ink `#1A2420`, paddle gold
-`#E6B422` (hero CTA + achievement stamp + schedule rail — not Cub
-insignia), ember `#E07A3D`, mist `#D7E4EA`.
+`#E6B422` (hero CTA + schedule rail), ember `#E07A3D`, mist `#D7E4EA`.
 
 Hero type is fluid (`clamp`) with safe padding so the shout, gold CTA,
 and soft-hold line wrap instead of clipping from phone through wide.
 
 One scrolling pitch. The hero is still B’s left half at every width:
-full-bleed raft, title + den on the photo, paddle-gold “I'm interested”,
-soft hold + about $327 under the button. No Soft Hold corner chip. No teal
-body CTA. Below 1024px the plan/camp half scrolls under that hero; from
-1024px the halves sit side by side. The achievement stamp is a den-made
-paddle mark for the Cub Scout rafting-patch earn — not BSA insignia.
+full-bleed raft, title + den on the photo, paddle-gold “Earn the Cub
+rafting patch” (anchors to the patch beat), soft-hold prose under the
+button. **HERO_FOCAL_V1** keeps the yellow-helmet Cub + raft crew as the
+optical center (`object-fit: cover` + near-center). Do not pan-crop to
+clear type. No Soft Hold corner chip. No teal body CTA. No booking button.
+Below 1024px the plan/camp half scrolls under that hero; from 1024px the
+halves sit side by side. The patch beat shows the real Whitewater
+Rafting emblem they award (Gene override for this asset only). Do not
+invent other BSA / Cub badge art.
+
+**WHY_THIS_TRIP_V1** — Gene locked the three Why this trip paragraphs
+verbatim in `lib/copy.ts`. Do not paraphrase.
 
 **CONTENT_POLISH_V1** copy lives in `lib/copy.ts` (hero, why-this-trip,
-cost prose, RSVP, day intros, four activity cards). Legacy Roast Skits
-and Youth-Led Cooking Challenge stay off the page.
+patch beat, logistics, day intros, four activity cards). Legacy Roast
+Skits and Youth-Led Cooking Challenge stay off the page.
+
+**LOGISTICS_CTA_V1** kills the interest form. The gold CTA is dream-sell
+only — it scrolls to the early Cub rafting patch beat. The old Who’s in?
+block is **Logistics & costs** (soft hold, $327 breakdown, WWE contact).
 
 **DESIGN_SCHEDULE_V1** is the Fri / Sat / Sun tabbed day card: gold
 timeline, hollow river-teal dots, activity cards with a gold top rule.

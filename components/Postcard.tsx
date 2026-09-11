@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useRef, type RefObject } from "react";
-import { AchievementStamp } from "@/components/AchievementStamp";
 import { copy } from "@/lib/copy";
 import { photos, trip } from "@/lib/trip";
 
@@ -77,7 +76,7 @@ export function Postcard() {
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[72%_38%] lg:object-[88%_36%]"
+            className="hero-focal"
           />
           <div className="hero-scrim absolute inset-0" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 shimmer" />
@@ -101,8 +100,8 @@ export function Postcard() {
             </div>
             <a
               ref={cta}
-              href="#rsvp"
-              className="hero-cta inline-flex w-fit shrink-0 items-center rounded-full bg-gold px-6 text-base font-bold text-ink"
+              href="#patch"
+              className="hero-cta inline-flex w-fit max-w-full shrink-0 items-center text-pretty rounded-full bg-gold px-6 text-base font-bold text-ink"
             >
               {copy.hero.cta}
             </a>
@@ -171,25 +170,13 @@ export function Postcard() {
               {copy.why.title}
             </h2>
             <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
-              {copy.hero.paragraph}
+              {copy.why.p1}
             </p>
             <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
-              {copy.why.body}
+              {copy.why.p2}
             </p>
-            <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty text-ink/80">
-              {copy.cost}
-            </p>
-          </div>
-
-          <div className="mt-auto flex items-center gap-3">
-            <AchievementStamp />
-            <p className="text-sm leading-snug text-ink">
-              <span className="text-base font-bold tracking-wide text-ink uppercase">
-                {trip.patchBeat}
-              </span>
-              <span className="mt-0.5 block text-xs text-ink/65">
-                They certify and award it. This stamp is ours — not BSA art.
-              </span>
+            <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
+              {copy.why.p3}
             </p>
           </div>
         </div>

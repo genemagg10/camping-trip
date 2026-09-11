@@ -24,7 +24,8 @@ export const trip = {
   scoutRaft: 129,
   adultRaft: 138,
   scoutDadApprox: 327,
-  mealsNote: "Families still share meals and snacks.",
+  mealsNote:
+    "Breakfast and dinner planned as a group. Whitewater Excitement provides lunch on the rafting trip.",
   website: "https://whitewaterexcitement.com",
   phone: "800.750.2386",
   phoneHref: "tel:8007502386",
@@ -115,5 +116,11 @@ export const photos = {
     alt: "Rafts, paddles, and river gear staged at the outfitter",
     width: 2048,
     height: 1536,
+  },
+  patch: {
+    src: asset("/photos/wwe-rafting-patch.png"),
+    alt: "The Whitewater Rafting patch Whitewater Excitement certifies and awards — circular emblem with paddles, raft, and fleur-de-lis",
+    width: 1200,
+    height: 1200,
   },
 } as const;

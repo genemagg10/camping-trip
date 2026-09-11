@@ -8,19 +8,40 @@ export const copy = {
     river: trip.river,
     place: `${trip.outfitter}, ${trip.city}`,
     dates: trip.dates,
-    cta: "I'm interested",
+    cta: "Earn the Cub rafting patch",
     hold: `Soft hold only · about $${trip.scoutDadApprox} for Scout + Dad · nothing booked until the den says go`,
-    paragraph: `This is the last overnight before these Scouts cross into Scouts BSA. Two nights at ${trip.outfitter}’s private river camp — bathrooms, hot showers, the South Fork right there. Saturday morning they earn the Cub Scout rafting patch (they certify and award it), then we paddle about fourteen miles and eat lunch on the water. Soft hold only. Nothing is booked until the den says go.`,
   },
+  // WHY_THIS_TRIP_V1 — Gene locked. Do not paraphrase, shorten, or rewrite.
   why: {
     title: "Why this trip",
-    body: "We camp at their private river camp — bathrooms, hot showers, fire rings, picnic tables, the river in earshot. Saturday is the long day: Cub Scout rafting patch lesson and award, then about fourteen miles on the South Fork with lunch. Saturday night we keep at the fire — Passing the Paddle, then Time Capsule Letters. This is a den weekend, not a corporate flyer.",
+    p1: "This is the last overnight our boys will have as Cub Scouts before they cross into Scouts BSA, and it feels like the right way to mark that. We'd spend two nights at Whitewater Excitement's private river camp, where we'll have real bathrooms, hot showers, and the South Fork running right alongside us. On Saturday morning the boys earn their Cub Scout rafting patch, which the outfitter certifies and awards on site, and then we push off for about fourteen miles down the river, stopping to eat lunch out on the water. Nothing has been booked yet and is currently under a soft hold, but I can confirm as soon as we're ready.",
+    p2: "The camp itself has everything we'd need to keep things easy: bathrooms, hot showers, fire rings, picnic tables, and the sound of the river never far off. Saturday is the big day, starting with the rafting patch lesson and award and building into those fourteen miles on the South Fork with lunch along the way. When we come back in, we're not done yet. We keep the evening going around the fire with Passing the Paddle and then Time Capsule Letters, the kind of quiet, meaningful close that makes a weekend like this stick with them. This is meant to feel like a den weekend, something we did together, not a packaged trip off a flyer.",
+    p3: "For cost, a Scout and dad together come to around $327. That breaks down to camping at $15 per person per night for two nights, $129 for the Scout's raft, and $138 for the adult's. We would need to plan breakfast and dinner as a group, they provide lunch during the rafting trip. Again, this is all still just a soft hold for now.",
   },
-  cost: `Scout + Dad lands around $${trip.scoutDadApprox}: camp $${trip.campPerPersonNight} per person per night × ${trip.campNights} nights, Scout raft $${trip.scoutRaft}, adult raft $${trip.adultRaft}. Meals are shared separately. Soft hold only.`,
-  rsvp: {
-    title: "Who’s in?",
-    body: `Raise a hand if this weekend should happen. Soft hold only — about $${trip.scoutDadApprox} for Scout + Dad, nothing booked until the den says go. Saved in this browser. Not a booking.`,
-    cta: "I'm interested",
+  patch: {
+    kicker: "Sat 9am",
+    title: "Earn the Cub rafting patch",
+    lesson: "Lesson Saturday at 9am.",
+    award: `${trip.outfitter} certifies and awards the Cub Scout rafting patch.`,
+    river: "Then about fourteen miles on the South Fork — plus lunch.",
+    honest:
+      "This is the Whitewater Rafting patch Whitewater Excitement certifies and awards. Phone-confirmed with the outfitter. Their public site lists the troop Merit Badge.",
+  },
+  logistics: {
+    title: "Logistics & costs",
+    hold: `Soft hold · ${trip.dates}. Nothing is booked until the den says go.`,
+    rows: [
+      {
+        label: "Camp",
+        value: `$${trip.campPerPersonNight}/person/night × ${trip.campNights} nights`,
+      },
+      { label: "Scout raft", value: `$${trip.scoutRaft}` },
+      { label: "Adult raft", value: `$${trip.adultRaft}` },
+    ],
+    totalLabel: "Scout + Dad",
+    totalValue: `≈ $${trip.scoutDadApprox}`,
+    meals: trip.mealsNote,
+    outfitter: `${trip.outfitter} · ${trip.city}`,
   },
 } as const;
 
