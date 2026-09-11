@@ -1,7 +1,7 @@
 # Cub Scout Arrow of Light — den trip pitch
 
-Warm dad postcard / neighborhood-flyer pitch site for an Arrow of Light den
-rafting + camp weekend on the South Fork American River with
+Warm dad postcard pitch for an Arrow of Light den rafting + camp weekend on
+the South Fork American River with
 [Whitewater Excitement](https://whitewaterexcitement.com) (Lotus, CA).
 
 **Soft hold only** — nothing is booked yet. This site gauges family interest.
@@ -10,7 +10,7 @@ rafting + camp weekend on the South Fork American River with
 
 - **When:** Fri Apr 23 – Sun Apr 25
 - **Where:** Whitewater Excitement private campground (bathrooms + hot showers) · South Fork American River
-- **Highlight:** Sat 9am Cub Scout rafting patch lesson (they certify and award the patch), then ~14 miles of rafting + lunch
+- **Highlight:** Sat morning Cub Scout rafting patch lesson (they certify and award the patch), then ~14 miles of rafting + lunch
 - **Ballpark:** Scout + Dad ≈ **$327** (raft + lunch + 2 nights camp)
   - Camp $15/person/night × 2 nights
   - Scout raft $129 · adult raft $138
@@ -45,11 +45,9 @@ Import the GitHub repo at [vercel.com/new](https://vercel.com/new). Framework
 preset: Next.js. Default build (`next build`) and output are fine — no extra
 env vars.
 
-## Motion (Dieter v1)
+## Design notes
 
-1. Badge stamp when the patch section enters view
-2. Soft scroll-tied drift on the hero / river band
-3. Section fade/rise ~200–400ms
-4. One-shot pulse on the interest button
-
-Honours `prefers-reduced-motion`.
+Mobile stacks the rafting hero over the plan. From 1024px the postcard splits
+side by side. Primary CTA is the paddle-gold **I'm interested** on the hero.
+The achievement stamp is den-made (paddles + wave), not BSA insignia. Cub
+Scout rafting patch is named in copy — phone-confirmed with the outfitter.

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const display = Fraunces({
+const display = Barlow_Condensed({
   subsets: ["latin"],
+  weight: ["600", "700", "800"],
   variable: "--font-display",
-  axes: ["SOFT", "WONK"],
 });
 
 const body = Source_Sans_3({
@@ -14,13 +14,13 @@ const body = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Arrow of Light den · South Fork river weekend",
+  title: "Last camping trip of the year · Arrow of Light den",
   description:
-    "Den pitch for a soft-hold Cub Scout rafting + camp weekend, Fri Apr 23 – Sun Apr 25, with Whitewater Excitement on the South Fork American River. Cub Scout rafting patch Saturday morning. Interest only — nothing booked.",
+    "Den pitch for a soft-hold Cub Scout rafting + camp weekend, Fri Apr 23 – Sun Apr 25, with Whitewater Excitement on the South Fork American River. Interest only — nothing booked.",
   openGraph: {
-    title: "Arrow of Light den · South Fork river weekend",
+    title: "Last camping trip of the year · Arrow of Light den",
     description:
-      "Fri Apr 23 – Sun Apr 25 · Lotus, CA · Cub Scout rafting patch, ~14 miles, two nights at the private campground. Soft hold only.",
+      "Fri Apr 23 – Sun Apr 25 · Lotus, CA · Cub Scout rafting patch, ~14 miles, two nights at the private campground. Soft hold only. Scout + Dad ≈ $327.",
     type: "website",
   },
 };
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
-      <body className="min-h-full font-sans text-ink">{children}</body>
+      <body className="min-h-full bg-foam font-sans text-ink">{children}</body>
     </html>
   );
 }

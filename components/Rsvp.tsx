@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState, useSyncExternalStore } from "react";
+import { FormEvent, useState, useSyncExternalStore } from "react";
 import {
   clearRsvp,
   emptyRsvp,
@@ -13,7 +13,7 @@ import {
 import { trip } from "@/lib/trip";
 
 const labels: Record<Interest, string> = {
-  in: "We're in",
+  in: "I'm interested",
   maybe: "Leaning yes",
   out: "Not this time",
 };
@@ -21,27 +21,6 @@ const labels: Record<Interest, string> = {
 export function Rsvp() {
   const saved = useSyncExternalStore(subscribeRsvp, readRsvp, () => null);
   const [form, setForm] = useState<RsvpRecord>(emptyRsvp);
-  const [ctaNode, setCtaNode] = useState<HTMLButtonElement | null>(null);
-
-  useEffect(() => {
-    if (!ctaNode) return;
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
-      ctaNode.classList.add("cta-ready");
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          ctaNode.classList.add("cta-ready");
-          io.disconnect();
-        }
-      },
-      { threshold: 0.3 },
-    );
-    io.observe(ctaNode);
-    return () => io.disconnect();
-  }, [ctaNode]);
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -56,133 +35,119 @@ export function Rsvp() {
   }
 
   return (
-    <section id="rsvp" className="mx-auto w-full max-w-3xl px-4 py-14">
-      <div className="paper-card rounded-[1.6rem] border-4 border-ink/10 p-5 sm:p-8">
-        <p className="text-xs font-semibold tracking-[0.22em] text-stamp uppercase">
-          Interest card · lives on this device
-        </p>
-        <h2 className="mt-2 font-display text-3xl font-semibold sm:text-4xl">
-          Raise a hand. We are not taking deposits.
-        </h2>
-        <p className="mt-3 text-[1.05rem] leading-relaxed text-ink-soft">
-          {trip.holdLine} This form stays in your browser (
-          <code className="text-sm">localStorage</code>
-          ). It feels like an RSVP because den dads need a button that does
-          something. It does not email the outfitter or lock a raft.
-        </p>
+    <section id="rsvp" className="mx-auto w-full max-w-xl px-4 py-12 sm:px-6">
+      <h2 className="font-display text-2xl font-bold tracking-wide text-river uppercase">
+        Leave a hand-raise
+      </h2>
+      <p className="mt-2 text-[1.02rem] leading-relaxed text-ink/80">
+        {trip.holdLine} Saved in this browser only — not a booking.
+      </p>
 
-        {saved ? (
-          <div className="mt-6 rounded-xl bg-foam px-4 py-5">
-            <p className="font-display text-2xl text-pine">
-              {labels[saved.interest]} — {saved.family}
-            </p>
-            <p className="mt-2 text-ink-soft">
-              {saved.scouts} Scout{saved.scouts === 1 ? "" : "s"} · {saved.adults}{" "}
-              adult{saved.adults === 1 ? "" : "s"}
-              {saved.notes ? ` · “${saved.notes}”` : ""}
-            </p>
-            <p className="mt-3 text-sm text-ink-soft">
-              Saved on this phone or laptop only. Change your mind anytime —
-              this is still a soft hold.
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                clearRsvp();
-                setForm({ ...saved, savedAt: "" });
-              }}
-              className="mt-4 text-sm font-semibold text-river underline decoration-2 underline-offset-4"
-            >
-              Rewrite the card
-            </button>
-          </div>
-        ) : (
-          <form className="mt-6 grid gap-4" onSubmit={onSubmit}>
+      {saved ? (
+        <div className="mt-5 rounded-xl bg-mist px-4 py-4">
+          <p className="font-display text-xl font-bold text-forest uppercase">
+            {labels[saved.interest]} — {saved.family}
+          </p>
+          <p className="mt-1 text-sm text-ink/75">
+            {saved.scouts} Scout{saved.scouts === 1 ? "" : "s"} · {saved.adults}{" "}
+            adult{saved.adults === 1 ? "" : "s"}
+            {saved.notes ? ` · “${saved.notes}”` : ""}
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              clearRsvp();
+              setForm({ ...saved, savedAt: "" });
+            }}
+            className="mt-3 text-sm font-semibold text-river underline underline-offset-4"
+          >
+            Rewrite the card
+          </button>
+        </div>
+      ) : (
+        <form className="mt-5 grid gap-3" onSubmit={onSubmit}>
+          <label className="grid gap-1 text-sm font-semibold">
+            Family name
+            <input
+              required
+              value={form.family}
+              onChange={(e) => setForm({ ...form, family: e.target.value })}
+              name="family"
+              autoComplete="name"
+              placeholder="The River Household"
+              className="rounded-lg border border-mist bg-foam px-3 py-3 text-base font-normal outline-none focus:border-sky"
+            />
+          </label>
+          <div className="grid grid-cols-2 gap-3">
             <label className="grid gap-1 text-sm font-semibold">
-              Family name
+              Scouts
               <input
-                required
-                value={form.family}
-                onChange={(e) => setForm({ ...form, family: e.target.value })}
-                name="family"
-                autoComplete="name"
-                placeholder="The River Household"
-                className="rounded-xl border border-ink/15 bg-cream px-3 py-3 text-base font-normal outline-none ring-amber/40 focus:ring-4"
+                type="number"
+                min={1}
+                max={8}
+                value={form.scouts}
+                onChange={(e) =>
+                  setForm({ ...form, scouts: Number(e.target.value) })
+                }
+                className="rounded-lg border border-mist bg-foam px-3 py-3 text-base font-normal outline-none focus:border-sky"
               />
             </label>
-            <div className="grid grid-cols-2 gap-3">
-              <label className="grid gap-1 text-sm font-semibold">
-                Scouts
-                <input
-                  type="number"
-                  min={1}
-                  max={8}
-                  value={form.scouts}
-                  onChange={(e) =>
-                    setForm({ ...form, scouts: Number(e.target.value) })
-                  }
-                  className="rounded-xl border border-ink/15 bg-cream px-3 py-3 text-base font-normal outline-none ring-amber/40 focus:ring-4"
-                />
-              </label>
-              <label className="grid gap-1 text-sm font-semibold">
-                Adults
-                <input
-                  type="number"
-                  min={1}
-                  max={8}
-                  value={form.adults}
-                  onChange={(e) =>
-                    setForm({ ...form, adults: Number(e.target.value) })
-                  }
-                  className="rounded-xl border border-ink/15 bg-cream px-3 py-3 text-base font-normal outline-none ring-amber/40 focus:ring-4"
-                />
-              </label>
-            </div>
-            <fieldset className="grid gap-2">
-              <legend className="text-sm font-semibold">How in are you?</legend>
-              <div className="grid gap-2 sm:grid-cols-3">
-                {(["in", "maybe", "out"] as const).map((value) => (
-                  <label
-                    key={value}
-                    className={`cursor-pointer rounded-xl border px-3 py-3 text-center text-sm font-semibold ${
-                      form.interest === value
-                        ? "border-amber bg-gold/30"
-                        : "border-ink/15 bg-cream"
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="interest"
-                      value={value}
-                      checked={form.interest === value}
-                      onChange={() => setForm({ ...form, interest: value })}
-                      className="sr-only"
-                    />
-                    {labels[value]}
-                  </label>
-                ))}
-              </div>
-            </fieldset>
             <label className="grid gap-1 text-sm font-semibold">
-              Notes for the den dad (optional)
-              <textarea
-                value={form.notes}
-                onChange={(e) => setForm({ ...form, notes: e.target.value })}
-                rows={3}
-                placeholder="Need a ride share, allergic to river lunch mystery pasta, etc."
-                className="rounded-xl border border-ink/15 bg-cream px-3 py-3 text-base font-normal outline-none ring-amber/40 focus:ring-4"
+              Adults
+              <input
+                type="number"
+                min={1}
+                max={8}
+                value={form.adults}
+                onChange={(e) =>
+                  setForm({ ...form, adults: Number(e.target.value) })
+                }
+                className="rounded-lg border border-mist bg-foam px-3 py-3 text-base font-normal outline-none focus:border-sky"
               />
             </label>
-            <button
-              ref={setCtaNode}
-              type="submit"
-              className="rounded-full bg-amber px-6 py-3.5 text-base font-semibold text-cream shadow-[0_6px_0_#9a4f12]"
-            >
-              Save our interest
-            </button>
-          </form>
-        )}
-      </div>
+          </div>
+          <fieldset className="grid gap-2">
+            <legend className="text-sm font-semibold">How in are you?</legend>
+            <div className="grid gap-2 sm:grid-cols-3">
+              {(["in", "maybe", "out"] as const).map((value) => (
+                <label
+                  key={value}
+                  className={`cursor-pointer rounded-lg border px-3 py-2.5 text-center text-sm font-semibold ${
+                    form.interest === value
+                      ? "border-gold bg-gold/20"
+                      : "border-mist bg-foam"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="interest"
+                    value={value}
+                    checked={form.interest === value}
+                    onChange={() => setForm({ ...form, interest: value })}
+                    className="sr-only"
+                  />
+                  {labels[value]}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+          <label className="grid gap-1 text-sm font-semibold">
+            Notes (optional)
+            <textarea
+              value={form.notes}
+              onChange={(e) => setForm({ ...form, notes: e.target.value })}
+              rows={2}
+              className="rounded-lg border border-mist bg-foam px-3 py-3 text-base font-normal outline-none focus:border-sky"
+            />
+          </label>
+          <button
+            type="submit"
+            className="min-h-11 justify-self-start rounded-full border border-mist px-5 text-sm font-semibold text-ink"
+          >
+            Save on this device
+          </button>
+        </form>
+      )}
     </section>
   );
 }

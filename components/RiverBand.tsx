@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { photos } from "@/lib/trip";
 
-const frames = [photos.chiliBar, photos.halfDay, photos.wholeRiver, photos.family] as const;
+const frames = [photos.chiliBar, photos.family, photos.wholeRiver] as const;
 
 export function RiverBand() {
   const band = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ export function RiverBand() {
         const rect = el.getBoundingClientRect();
         const view = window.innerHeight || 1;
         const progress = (view - rect.top) / (view + rect.height);
-        const drift = (Math.min(1, Math.max(0, progress)) - 0.5) * 28;
+        const drift = (Math.min(1, Math.max(0, progress)) - 0.5) * 20;
         el.style.setProperty("--band-drift", `${drift}px`);
         ticking = false;
       });
@@ -35,33 +35,24 @@ export function RiverBand() {
   }, []);
 
   return (
-    <section className="relative mt-8 bg-river-deep py-10">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-8 shimmer opacity-70" />
-      <div className="mx-auto mb-6 max-w-5xl px-4">
-        <p className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
-          Colour, not clip art
-        </p>
-        <h2 className="mt-1 font-display text-3xl text-cream">
-          The photos do the yelling. We just tape them down.
-        </h2>
-      </div>
+    <section className="bg-mist/70 py-8">
       <div
         ref={band}
-        className="mx-auto flex max-w-6xl gap-3 overflow-x-auto px-4 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="mx-auto flex max-w-6xl gap-3 overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {frames.map((photo, i) => (
           <figure
             key={photo.src}
-            className="relative h-56 w-[78vw] shrink-0 overflow-hidden rounded-xl border-4 border-cream sm:h-72 sm:w-[38vw]"
+            className="relative h-44 w-[72vw] shrink-0 overflow-hidden rounded-xl bg-sky sm:h-56 sm:w-[34vw]"
             style={{
-              transform: `translateY(calc(var(--band-drift, 0px) * ${i % 2 === 0 ? 1 : -0.7}))`,
+              transform: `translateY(calc(var(--band-drift, 0px) * ${i % 2 === 0 ? 1 : -0.65}))`,
             }}
           >
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
-              sizes="(max-width: 640px) 80vw, 38vw"
+              sizes="(max-width: 640px) 72vw, 34vw"
               className="object-cover"
             />
           </figure>
