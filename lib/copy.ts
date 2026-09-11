@@ -15,7 +15,7 @@ export const copy = {
   why: {
     title: "Why this trip",
     p1: "This is the last overnight our boys will have as Cub Scouts before they cross into Scouts BSA, and it feels like the right way to mark that. We'd spend two nights at Whitewater Excitement's private river camp, where we'll have real bathrooms, hot showers, and the South Fork running right alongside us. On Saturday morning the boys earn their Cub Scout rafting patch, which the outfitter certifies and awards on site, and then we push off for about fourteen miles down the river, stopping to eat lunch out on the water. Nothing has been booked yet and is currently under a soft hold, but I can confirm as soon as we're ready.",
-    p2: "The camp itself has everything we'd need to keep things easy: bathrooms, hot showers, fire rings, picnic tables, and the sound of the river never far off. Saturday is the big day, starting with the rafting patch lesson and award and building into those fourteen miles on the South Fork with lunch along the way. When we come back in, we're not done yet. We keep the evening going around the fire with Passing the Paddle and then Time Capsule Letters, the kind of quiet, meaningful close that makes a weekend like this stick with them. This is meant to feel like a den weekend, something we did together, not a packaged trip off a flyer.",
+    p2: "The camp itself has everything we'd need to keep things easy: bathrooms, hot showers, fire rings, picnic tables, and the sound of the river never far off. Saturday is the big day, starting with the rafting patch lesson and award and building into those fourteen miles on the South Fork with lunch along the way. When we come back from rafting we can keep the fun going with some activities and food around the camp fire. We can come up with some activities that acknowledge their final year in cub scouts and are a fun way to spend time together as a den.",
     p3: "For cost, a Scout and dad together come to around $327. That breaks down to camping at $15 per person per night for two nights, $129 for the Scout's raft, and $138 for the adult's. We would need to plan breakfast and dinner as a group, they provide lunch during the rafting trip. Again, this is all still just a soft hold for now.",
   },
   patch: {
@@ -173,6 +173,9 @@ export const days: readonly DayCard[] = [
     ],
   },
 ] as const;
+
+export const activitiesIntro =
+  "These are a few ideas to start the brainstorm — not a fixed program. The den can keep, swap, or invent whatever fits the weekend.";
 
 export const activities = [
   {

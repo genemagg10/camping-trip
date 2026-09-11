@@ -3,7 +3,7 @@
 import { useId, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { ScheduleIconMark } from "@/components/ScheduleIcons";
-import { activities, days, type DayId } from "@/lib/copy";
+import { activities, activitiesIntro, days, type DayId } from "@/lib/copy";
 
 export function Weekend() {
   const [active, setActive] = useState<DayId>("fri");
@@ -105,6 +105,11 @@ export function Weekend() {
         </Reveal>
 
         <div className="grid min-w-0 gap-3 sm:grid-cols-2">
+          <Reveal className="min-w-0 sm:col-span-2">
+            <p className="text-[0.98rem] leading-relaxed text-pretty text-ink/70">
+              {activitiesIntro}
+            </p>
+          </Reveal>
           {activities.map((card, index) => (
             <Reveal
               key={card.title}
