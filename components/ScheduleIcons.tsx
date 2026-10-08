@@ -169,5 +169,93 @@ export function ScheduleIconMark({ name, className = "size-4" }: Props) {
           />
         </svg>
       );
+    case "ferry":
+      return (
+        <svg {...common}>
+          <path
+            d="M4 14 H20 L17 18 H7 Z"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 14 V9 H12 L15 14"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "hike":
+      return (
+        <svg {...common}>
+          <path
+            d="M3 18 L9 8 L13 13 L21 5"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinejoin="round"
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 18 H21"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "lantern":
+      return (
+        <svg {...common}>
+          <rect
+            x="9"
+            y="7"
+            width="6"
+            height="10"
+            rx="1.25"
+            stroke="currentColor"
+            strokeWidth="1.75"
+          />
+          <path
+            d="M10 7 V5 H14 V7 M12 10 V14"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "pan":
+      return (
+        <svg {...common}>
+          <ellipse
+            cx="11"
+            cy="13"
+            rx="6"
+            ry="3.25"
+            stroke="currentColor"
+            strokeWidth="1.75"
+          />
+          <path
+            d="M16.5 13 H21"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "bike":
+      return (
+        <svg {...common}>
+          <circle cx="7" cy="16" r="3" stroke="currentColor" strokeWidth="1.75" />
+          <circle cx="17" cy="16" r="3" stroke="currentColor" strokeWidth="1.75" />
+          <path
+            d="M7 16 L11 16 L10 10 H14 L17 16 M10 10 H7"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
   }
 }

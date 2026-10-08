@@ -7,6 +7,7 @@ type Props = {
   className?: string;
   delay?: 0 | 1 | 2 | 3;
   as?: "div" | "section" | "article" | "li";
+  id?: string;
 };
 
 export function Reveal({
@@ -14,6 +15,7 @@ export function Reveal({
   className = "",
   delay = 0,
   as: Tag = "div",
+  id,
 }: Props) {
   const ref = useRef<HTMLElement | null>(null);
 
@@ -52,6 +54,7 @@ export function Reveal({
   return (
     <Tag
       ref={ref as never}
+      id={id}
       className={`reveal ${delayClass} ${className}`.trim()}
     >
       {children}

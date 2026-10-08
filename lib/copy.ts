@@ -1,63 +1,4 @@
-import { trip } from "@/lib/trip";
-
-/** CONTENT_POLISH_V1 — den-leader copy. Do not invent extra program. */
-export const copy = {
-  hero: {
-    shout: "Last camping trip of the year!",
-    den: "Arrow of Light den · Dads and Scouts",
-    river: trip.river,
-    place: `${trip.outfitter}, ${trip.city}`,
-    dates: trip.dates,
-    cta: "Earn the Cub rafting patch",
-    hold: `Soft hold only · about $${trip.scoutDadApprox} for Scout + Dad · nothing booked until the den says go`,
-  },
-  // WHY_THIS_TRIP_V1 — Gene locked. Do not paraphrase, shorten, or rewrite.
-  why: {
-    title: "Why this trip",
-    p1: "This is the last overnight our boys will have as Cub Scouts before they cross into Scouts BSA, and it feels like the right way to mark that. We'd spend two nights at Whitewater Excitement's private river camp, where we'll have real bathrooms, hot showers, and the South Fork running right alongside us. On Saturday morning the boys earn their Cub Scout rafting patch, which the outfitter certifies and awards on site, and then we push off for about fourteen miles down the river, stopping to eat lunch out on the water. Nothing has been booked yet and is currently under a soft hold, but I can confirm as soon as we're ready.",
-    p2: "The camp itself has everything we'd need to keep things easy: bathrooms, hot showers, fire rings, picnic tables, and the sound of the river never far off. Saturday is the big day, starting with the rafting patch lesson and award and building into those fourteen miles on the South Fork with lunch along the way. When we come back from rafting we can keep the fun going with some activities and food around the camp fire. We can come up with some activities that acknowledge their final year in cub scouts and are a fun way to spend time together as a den.",
-    p3: "For cost, a Scout and dad together come to around $327. That breaks down to camping at $15 per person per night for two nights, $129 for the Scout's raft, and $138 for the adult's. We would need to plan breakfast and dinner as a group, they provide lunch during the rafting trip. Again, this is all still just a soft hold for now.",
-  },
-  patch: {
-    kicker: "Sat 9am",
-    title: "Earn the Cub rafting patch",
-    lesson: "Lesson Saturday at 9am.",
-    award: `${trip.outfitter} certifies and awards the Cub Scout rafting patch.`,
-    river: "Then about fourteen miles on the South Fork — plus lunch.",
-    honest:
-      "This is the Whitewater Rafting patch Whitewater Excitement certifies and awards. Phone-confirmed with the outfitter. Their public site lists the troop Merit Badge.",
-  },
-  gettingThere: {
-    title: "Getting there · Lafayette to Lotus",
-    captionBefore: "About ",
-    captionFact: "120 miles / 2–2½ hours",
-    captionAfter:
-      " non-rush from Lafayette to Whitewater Excitement in Lotus (6580 Highway 49, Lotus, CA 95651).",
-    caveat: "Friday/weekend US-50 can run longer. Not a live traffic quote.",
-    mapsLabel: "Open in Maps",
-    osmLabel: "View larger map",
-    frameTitle:
-      "OpenStreetMap of Lafayette, California to Whitewater Excitement at 6580 Highway 49, Lotus",
-  },
-  logistics: {
-    title: "Logistics & costs",
-    hold: `Soft hold · ${trip.dates}. Nothing is booked until the den says go.`,
-    rows: [
-      {
-        label: "Camp",
-        value: `$${trip.campPerPersonNight}/person/night × ${trip.campNights} nights`,
-      },
-      { label: "Scout raft", value: `$${trip.scoutRaft}` },
-      { label: "Adult raft", value: `$${trip.adultRaft}` },
-    ],
-    totalLabel: "Scout + Dad",
-    totalValue: `≈ $${trip.scoutDadApprox}`,
-    meals: trip.mealsNote,
-    outfitter: `${trip.outfitter} · ${trip.city}`,
-  },
-} as const;
-
-export type DayId = "fri" | "sat" | "sun";
+/** Visible site copy for the three-weekend pitch. No em dashes. */
 
 export type ScheduleIcon =
   | "tent"
@@ -69,145 +10,128 @@ export type ScheduleIcon =
   | "paddle"
   | "letter"
   | "hunt"
-  | "pack";
+  | "pack"
+  | "ferry"
+  | "hike"
+  | "lantern"
+  | "pan"
+  | "bike";
 
-export type ScheduleRow = {
-  time: string;
-  title: string;
-  place: string;
-  icon: ScheduleIcon;
-};
+export const copy = {
+  hero: {
+    shout: "Three ways to close out Cubs",
+    den: "Arrow of Light den · Dads and Scouts",
+    line1: "Three weekends to compare",
+    line2: "Angel Island, Coloma, or Pinnacles",
+    dates: "Fri Apr 23 to Sun Apr 25, 2027",
+    cta: "See the three options",
+    hold: "Soft hold on the dates only. Nothing is booked.",
+  },
+  why: {
+    title: "What changed",
+    p1: "I had this weekend pointed at the South Fork, with a raft trip as the thing we would bring home. Then I read the current age chart. Whitewater, even with a professional guide on the boat, is marked for Scouts BSA and older. Our Scouts are still Arrow of Light, which is still Cub Scouts. So the den is not going rafting.",
+    p2: "The dates stay: Friday, April 23 through Sunday, April 25, 2027. What changed is the menu. Three real weekends, each one a den campout we can actually run, with the trade-offs written down so we can pick.",
+    p3: "Nothing is booked. This is a soft hold on the calendar. Costs below assume six Scouts and six dads, one adult with each Scout, unless a line says otherwise. A smaller den moves the per-pair number. The comparison table is at the bottom, after each option has had a full say.",
+  },
+  rule: {
+    title: "The rule, in one paragraph",
+    before:
+      "The BSA Age-Appropriate Guidelines (",
+    linkLabel: "form 680-685, August 2024",
+    href: "https://filestore.scouting.org/filestore/HealthSafety/pdf/680-685.pdf",
+    middle:
+      ") check \"Paddle Sports: Whitewater With Professional Guide on Board\" for Scouts BSA and older Scouts. Arrow of Light is not on that row. Youth-operated boats on Class I or II whitewater are the same: Scouts BSA and older. Cub boating, including ",
+    paddleLabel: "Cub Paddle Craft",
+    paddleHref: "https://www.scouting.org/cub-scout-adventures/paddle-craft/",
+    after:
+      ", stays on calm or gently flowing water and is not a river float trip. The Whitewater Rafting award is for Scouts BSA, Venturing, and Sea Scouts. Guide to Safe Scouting treats an activity that is off the current age chart as not allowed. We can still camp, hike, bike, ride a ferry, pan for gold, and cook outdoors.",
+    moreLabel: "Whitewater Rafting award brochure (April 1, 2025)",
+    moreHref:
+      "https://www.scouting.org/wp-content/uploads/2025/12/WW-Rafting-brochure-4_1_25.pdf",
+    gssLabel: "Guide to Safe Scouting, prohibited activities",
+    gssHref: "https://www.scouting.org/health-and-safety/gss/gss07/",
+  },
+} as const;
 
-export type DayCard = {
-  id: DayId;
-  tab: string;
-  heading: string;
-  subtitle: string;
-  intro: string;
-  rows: ScheduleRow[];
-};
-
-export const days: readonly DayCard[] = [
-  {
-    id: "fri",
-    tab: "Fri",
-    heading: "Friday, April 23",
-    subtitle: "Arrive & settle",
-    intro:
-      "Friday we roll into Whitewater Excitement’s private river camp, pitch tents, and find the showers. Dinner is easy — the den brings and shares. After the dishes, Paracord River Lanyards at the craft station. No hour-by-hour syllabus. Just arrive and settle.",
-    rows: [
-      {
-        time: "3:00–5:00 PM",
-        title: "Check-in & camp setup",
-        place: "WWE private river camp",
-        icon: "tent",
-      },
-      {
-        time: "Evening",
-        title: "Easy dinner",
-        place: "Campsite",
-        icon: "utensils",
-      },
-      {
-        time: "After dinner",
-        title: "Paracord River Lanyards",
-        place: "Campsite craft station",
-        icon: "lanyard",
-      },
-    ],
-  },
-  {
-    id: "sat",
-    tab: "Sat",
-    heading: "Saturday, April 24",
-    subtitle: "Patch, river, fire",
-    intro:
-      "Saturday earns the weekend. Morning Cub Scout rafting patch at Whitewater Excitement — they certify it and they award it — then about fourteen miles on the South Fork plus lunch. Back to camp to dry out. After dark: Passing the Paddle, then Time Capsule Letters at the fire.",
-    rows: [
-      {
-        time: "9:00 AM",
-        title: "Cub Scout rafting patch lesson & award",
-        place: "Whitewater Excitement",
-        icon: "patch",
-      },
-      {
-        time: "Morning–afternoon",
-        title: "~14 miles rafting + lunch",
-        place: "South Fork American River",
-        icon: "raft",
-      },
-      {
-        time: "Afternoon",
-        title: "Return to camp · dry out · free time",
-        place: "Private river camp",
-        icon: "camp",
-      },
-      {
-        time: "Evening",
-        title: "Passing the Paddle ceremony",
-        place: "Campfire",
-        icon: "paddle",
-      },
-      {
-        time: "Evening",
-        title: "Time Capsule Letters",
-        place: "Campfire",
-        icon: "letter",
-      },
-    ],
-  },
-  {
-    id: "sun",
-    tab: "Sun",
-    heading: "Sunday, April 25",
-    subtitle: "Leave No Trace & home",
-    intro:
-      "Sunday is Leave No Trace and home. Breakfast at camp, a Micro-Trash scavenger hunt on the grounds, then we pack and go. No fourth activity. The river already did the work.",
-    rows: [
-      {
-        time: "Morning",
-        title: "Breakfast",
-        place: "Campsite",
-        icon: "utensils",
-      },
-      {
-        time: "After breakfast",
-        title: "Micro-Trash Scavenger Hunt",
-        place: "Camp grounds",
-        icon: "hunt",
-      },
-      {
-        time: "Late morning",
-        title: "Pack up · head home",
-        place: "",
-        icon: "pack",
-      },
-    ],
-  },
+export const jumps = [
+  { href: "#angel-island", label: "Angel Island" },
+  { href: "#coloma", label: "Coloma camp" },
+  { href: "#pinnacles", label: "Pinnacles" },
+  { href: "#compare", label: "Compare" },
 ] as const;
 
-export const activitiesIntro =
-  "These are a few ideas to start the brainstorm — not a fixed program. The den can keep, swap, or invent whatever fits the weekend.";
+export const compare = {
+  title: "Side by side",
+  lede: "Same dates, three different weekends. Prices are per Scout plus one Dad, six pairs, and they are ranges on purpose.",
+  swipe: "On a phone, swipe sideways. The topic column stays put.",
+  columns: [
+    { id: "angel-island", label: "Angel Island" },
+    { id: "coloma", label: "Coloma camp" },
+    { id: "pinnacles", label: "Pinnacles" },
+  ],
+  rows: [
+    {
+      label: "Cost, Scout + Dad",
+      cells: [
+        "About $140 to $170. Tiburon ferry, two sites, food we pack.",
+        "Den campout about $170 to $200. A private Sunday half-day raft adds about $200 to $240, and that is not a den cost.",
+        "About $150 to $200. One group site split six ways, plus entrance, food, and gas.",
+      ],
+    },
+    {
+      label: "Drive from Lafayette",
+      cells: [
+        "Tiburon about 40 miles and about an hour, then the ferry. SF Ferry Building about 20 miles and 30 to 50 minutes.",
+        "About 120 miles and 2 to 2.5 hours to Lotus. A Friday on US-50 can run longer.",
+        "About 130 miles and roughly 3 hours to the east entrance. 680 and 101 can add 30 to 60 minutes.",
+      ],
+    },
+    {
+      label: "Booking",
+      cells: [
+        "Hard. ReserveCalifornia opens Apr 23, 2027 on Fri Oct 23, 2026 at 8:00 a.m. Pacific.",
+        "Medium. Call the camp. No release-day lottery. Ask if they will rent it without a raft booking.",
+        "Group sites can book 12 months out, so check this week. Tent sites for an Apr 23 arrival open Oct 23, 2026.",
+      ],
+    },
+    {
+      label: "Wow",
+      cells: [
+        "High. An island, a summit, and the bay.",
+        "Medium for the den: gold in a pan and a river camp. The raft is a private extra after we are done.",
+        "Highest, if Bear Gulch is open. A cave trail and condors.",
+      ],
+    },
+    {
+      label: "Rules fit",
+      cells: [
+        "Strong. Hike, bike, ferry, camp. No whitewater. Confirm the council camping list.",
+        "Strong for the campout, if the raft stays a private family trip after the den ends.",
+        "Strong if we hike the trail and do not call it caving. Confirm the council camping list.",
+      ],
+    },
+    {
+      label: "Weather risk",
+      cells: [
+        "Wind, fog, and cold nights, with no wood fire. Ferries can cancel.",
+        "Foothills can be warm or wet. Spring flow can raise a private trip's age minimum to 12. A fire permit can be pulled.",
+        "Best odds of the three in late April. The cave can still close for bats or water. Fires only if the park allows them.",
+      ],
+    },
+  ],
+} as const;
 
-export const activities = [
-  {
-    title: "Paracord River Lanyards",
-    when: "Fri evening",
-    body: "Friday after dinner, each Scout makes a paracord river lanyard — something that clips to a PFD or pack and comes home with them. Simple knots at a camp craft station. Hands busy while the river talks.",
-  },
-  {
-    title: "Passing the Paddle",
-    when: "Sat fire",
-    body: "Saturday night at the fire we pass a paddle. A few words from dads and Scouts about the river day and what’s next — Arrow of Light heading toward Scouts BSA. Den-made. Not a script from a binder.",
-  },
-  {
-    title: "Time Capsule Letters",
-    when: "Sat fire",
-    body: "Same fire. Write a short letter to the Scout these kids are becoming. Seal it. Open it later, when the den decides — after they cross, or whenever it matters. Paper, not a slide deck.",
-  },
-  {
-    title: "Micro-Trash Scavenger Hunt",
-    when: "Sun morning",
-    body: "Sunday morning we walk the camp and grounds looking for the tiny trash other people miss. Pack it out. Leave the river camp cleaner than we found it. Leave No Trace as a game, then we go home.",
-  },
-] as const;
+export const still = {
+  title: "What we still need to figure out",
+  lede: "Nothing is booked. These are the questions that pick the weekend, or that block a reservation once we pick.",
+  items: [
+    "Which of the three we are actually doing.",
+    "Headcount, so the per-pair math is real. Everything above assumes six Scouts and six dads.",
+    "Who the BALOO-trained adult is. An Arrow of Light den campout needs one.",
+    "Whether the campsite is on our council's approved list, or whether we need a tour plan. That question sits on all three.",
+    "Angel Island: two environmental sites or Kayak Camp, and whether the spring timetable has a Friday Tiburon boat.",
+    "Coloma: will Whitewater Excitement rent the camp to a den that is not booking rafts? If not, Camp Lotus or another Coloma campground.",
+    "Pinnacles: is a group site still open for April 23 to 25, 2027, and what does it cost tonight on recreation.gov?",
+    "If we need a release-day alarm, who is logged in at 8:00 a.m. Pacific on Friday, October 23, 2026. That morning opens Angel Island, and it opens Pinnacles tent sites. Pinnacles group sites will not wait for it.",
+  ],
+} as const;

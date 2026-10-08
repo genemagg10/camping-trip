@@ -14,13 +14,13 @@ const body = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Last camping trip of the year! · Arrow of Light den",
+  title: "Three ways to close out Cubs · Arrow of Light den",
   description:
-    "Arrow of Light den · Dads and Scouts. Last overnight before Scouts BSA — Fri Apr 23 – Sun Apr 25 at Whitewater Excitement, Lotus, CA. Cub Scout rafting patch Saturday, then ~14 miles. Soft hold only · about $327 for Scout + Dad.",
+    "Arrow of Light den, dads and Scouts. Fri Apr 23 to Sun Apr 25, 2027. Three weekends to compare: Angel Island, a Coloma campout, and Pinnacles. Soft hold only. Nothing booked. The den is not going rafting.",
   openGraph: {
-    title: "Last camping trip of the year! · Arrow of Light den",
+    title: "Three ways to close out Cubs · Arrow of Light den",
     description:
-      "South Fork American River · Whitewater Excitement, Lotus, CA · Fri Apr 23 – Sun Apr 25. Soft hold only · about $327 for Scout + Dad.",
+      "Fri Apr 23 to Sun Apr 25, 2027. Angel Island, Coloma, or Pinnacles. Soft hold only. Nothing booked.",
     type: "website",
   },
 };
