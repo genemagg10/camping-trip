@@ -11,7 +11,7 @@ export function CompareTable() {
         <p className="mt-3 max-w-3xl text-[1.05rem] leading-relaxed text-pretty">
           {compare.lede}
         </p>
-        <p className="mt-2 text-sm text-ink/70">{compare.swipe}</p>
+        <p className="compare-swipe mt-2 text-sm text-ink/70">{compare.swipe}</p>
         <div className="compare-wrap mt-5">
           <table className="compare-table">
             <caption className="sr-only">
@@ -33,8 +33,11 @@ export function CompareTable() {
               {compare.rows.map((row) => (
                 <tr key={row.label}>
                   <th scope="row">{row.label}</th>
-                  {row.cells.map((cell) => (
-                    <td key={cell}>{cell}</td>
+                  {row.cells.map((cell, index) => (
+                    <td key={compare.columns[index].id}>
+                      <span className="compare-label">{compare.columns[index].label}</span>
+                      {cell}
+                    </td>
                   ))}
                 </tr>
               ))}

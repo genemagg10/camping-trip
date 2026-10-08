@@ -752,3 +752,64 @@ h3 {
 .compare-table tbody tr:nth-child(even) td {
   background: color-mix(in srgb, var(--mist) 55%, white);
 }
+
+.compare-label {
+  display: none;
+}
+
+/* Phone: stack each topic so all three weekends are on screen.
+   Wider layouts keep the sideways table. */
+@media (max-width: 900px) {
+  .compare-swipe {
+    display: none;
+  }
+
+  .compare-wrap {
+    overflow: visible;
+  }
+
+  .compare-table,
+  .compare-table tbody,
+  .compare-table tr,
+  .compare-table th,
+  .compare-table td {
+    display: block;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    position: static;
+    box-shadow: none;
+  }
+
+  .compare-table {
+    min-width: 0;
+  }
+
+  .compare-table thead {
+    display: none;
+  }
+
+  .compare-table tr {
+    margin-top: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--mist);
+    border-radius: 0.9rem;
+  }
+
+  .compare-table tbody th {
+    background: var(--river);
+    color: var(--foam);
+  }
+
+  .compare-table td,
+  .compare-table tbody tr:nth-child(even) td {
+    background: #fff;
+  }
+
+  .compare-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--river);
+    font-weight: 800;
+  }
+}
