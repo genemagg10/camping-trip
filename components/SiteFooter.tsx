@@ -1,3 +1,4 @@
+import { ExtLink } from "@/components/ExtLink";
 import { trip } from "@/lib/trip";
 
 export function SiteFooter() {
@@ -6,29 +7,19 @@ export function SiteFooter() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-lg font-bold tracking-wide text-river uppercase">
-            {trip.outfitter}
+            {trip.den}
           </p>
           <p>
-            {trip.city} ·{" "}
-            <a className="underline underline-offset-2" href={trip.website}>
-              whitewaterexcitement.com
-            </a>{" "}
-            ·{" "}
-            <a className="underline underline-offset-2" href={trip.phoneHref}>
-              {trip.phone}
-            </a>
+            {trip.datesShort} · {trip.homeTown}
           </p>
+          <p className="mt-1 max-w-md text-pretty">{trip.hold} No RSVP on this page.</p>
         </div>
-        <p className="max-w-sm sm:text-right">
-          {trip.holdLine} Photos from the outfitter’s public pages —{" "}
-          <a
-            className="underline underline-offset-2"
-            href="https://github.com/genemagg10/camping-trip/blob/main/SOURCE.md"
-          >
-            SOURCE cites
-          </a>
-          . They certify the Cub Scout rafting patch (phone-confirmed).
-          Patch photo is the real Whitewater Rafting emblem they award.
+        <p className="max-w-sm text-pretty sm:text-right">
+          The den is not going rafting. Photo credits and the price sources live in{" "}
+          <ExtLink href="https://github.com/genemagg10/camping-trip/blob/main/SOURCE.md">
+            SOURCE.md
+          </ExtLink>
+          .
         </p>
       </div>
     </footer>
