@@ -22,24 +22,30 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const show = () => el.classList.add("is-in");
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
-      el.classList.add("is-in");
+      show();
       return;
     }
+    /* Tall phone sections never fill 16% of the viewport. Any overlap counts.
+       If the observer never fires, the timeout still shows the section. */
+    const timer = window.setTimeout(show, 1200);
     const io = new IntersectionObserver(
       (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            el.classList.add("is-in");
-            io.unobserve(el);
-          }
+        if (entries.some((entry) => entry.isIntersecting)) {
+          show();
+          window.clearTimeout(timer);
+          io.disconnect();
         }
       },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0, rootMargin: "0px" },
     );
     io.observe(el);
-    return () => io.disconnect();
+    return () => {
+      io.disconnect();
+      window.clearTimeout(timer);
+    };
   }, []);
 
   const delayClass =

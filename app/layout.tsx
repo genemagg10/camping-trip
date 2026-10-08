@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Bangers, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
@@ -31,7 +32,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-foam font-sans text-ink">{children}</body>
+      <body className="min-h-full bg-foam font-sans text-ink">
+        <Script id="reveal-fail-open" strategy="beforeInteractive">
+          {`document.documentElement.classList.add("js-reveal");
+setTimeout(function(){
+  document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("is-in");});
+},1200);`}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
