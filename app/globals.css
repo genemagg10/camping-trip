@@ -376,7 +376,14 @@ h3 {
   }
 }
 
+/* Visible by default. The fade is opt-in: a tiny script adds js-reveal
+   on <html>. No script, no hide, so a phone still gets the whole page. */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+html.js-reveal .reveal {
   opacity: 0;
   transform: translateY(16px);
   transition:
@@ -384,7 +391,7 @@ h3 {
     transform 320ms ease;
 }
 
-.reveal.is-in {
+html.js-reveal .reveal.is-in {
   opacity: 1;
   transform: none;
 }
@@ -448,7 +455,9 @@ h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal,
-  .reveal.is-in {
+  .reveal.is-in,
+  html.js-reveal .reveal,
+  html.js-reveal .reveal.is-in {
     opacity: 1;
     transform: none;
     transition: none;
