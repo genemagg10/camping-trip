@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, type RefObject } from "react";
 import { copy } from "@/lib/copy";
 import { photos } from "@/lib/trip";
@@ -103,6 +104,12 @@ export function Postcard() {
               {copy.hero.cta}
             </a>
             <p className="hero-hold text-foam">{copy.hero.hold}</p>
+            <Link
+              href="/rsvp"
+              className="mt-3 inline-flex min-h-11 items-center rounded-full border-2 border-gold bg-ink/45 px-4 text-sm font-bold text-gold"
+            >
+              RSVP for Pinnacles
+            </Link>
           </div>
         </div>
       </div>

@@ -822,3 +822,139 @@ html.js-reveal .reveal.is-in {
     font-weight: 800;
   }
 }
+
+/* RSVP campfire. Pixel blocks, one taller flame per saved response. */
+.campfire-scene {
+  container-type: inline-size;
+  background:
+    linear-gradient(180deg, #14211c 0%, #1a2420 42%, #2f4f3e 100%);
+}
+
+.flame-bit,
+.flame-tip {
+  animation: flame-flicker 700ms steps(2, end) infinite;
+}
+
+.flame-tip {
+  animation-duration: 450ms;
+}
+
+.flame-pop {
+  animation: flame-pop 600ms cubic-bezier(0.18, 1.12, 0.32, 1);
+}
+
+@keyframes flame-flicker {
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes flame-pop {
+  0% {
+    transform: scale(0.92);
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hiker-track {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  bottom: 1.85rem;
+  left: 0;
+  height: 2.6rem;
+  overflow: hidden;
+}
+
+.hiker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.7rem;
+  height: 2.4rem;
+  animation: hike 14s linear infinite;
+}
+
+.hiker-leg-a {
+  animation: hike-step 420ms steps(2, end) infinite;
+}
+
+.hiker-leg-b {
+  animation: hike-step 420ms steps(2, end) infinite reverse;
+}
+
+@keyframes hike {
+  from {
+    transform: translateX(-2.5rem);
+  }
+  to {
+    transform: translateX(100cqi);
+  }
+}
+
+@keyframes hike-step {
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.rsvp-input {
+  width: 100%;
+  min-height: 2.75rem;
+  border-radius: 0.75rem;
+  border: 2px solid color-mix(in srgb, var(--ink) 22%, transparent);
+  background: var(--foam);
+  padding: 0.55rem 0.8rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.rsvp-input:focus-visible {
+  outline: 2px solid var(--river);
+  outline-offset: 2px;
+}
+
+.rsvp-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 2.75rem;
+  border-radius: 0.85rem;
+  border: 2px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  background: #fff;
+  padding: 0.4rem 0.85rem;
+  font-weight: 700;
+}
+
+.rsvp-choice:has(input:checked) {
+  border-color: var(--ink);
+  background: color-mix(in srgb, var(--patch-gold) 28%, white);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.rsvp-choice input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--forest);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flame-bit,
+  .flame-tip,
+  .flame-pop,
+  .hiker,
+  .hiker-leg-a,
+  .hiker-leg-b {
+    animation: none;
+  }
+
+  .hiker {
+    transform: translateX(1.25rem);
+  }
+}

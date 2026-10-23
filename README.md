@@ -1,8 +1,9 @@
 # Arrow of Light den weekends
 
 Warm dad-postcard pitch for an Arrow of Light den (Cub Scouts, about 10 to 11).
-The weekend on the calendar is **Fri Apr 23 to Sun Apr 25, 2027**. Nothing is booked.
-There is no RSVP form.
+The comparison weekend is **Fri Apr 23 to Sun Apr 25, 2027**. The campout we are
+filling is **Pinnacles Campground, group site #127, Fri Apr 30 to Sun May 2, 2027**.
+RSVP is at `/rsvp`.
 
 The den is not going whitewater rafting. The BSA Age-Appropriate Guidelines
 (form 680-685, August 2024) check guided whitewater, and youth-operated Class I
@@ -69,7 +70,29 @@ GITHUB_PAGES=true npm run build
 Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · static export for
 GitHub Pages.
 
-No RSVP. Soft hold is prose only.
+RSVP is a static page. Responses are stored in Supabase, not in this repo.
+See the RSVP section below.
+
+## RSVP
+
+`/rsvp` collects one response per family: name, optional email, Yes / Maybe / No,
+adults, kids, cars, tent (bringing our own / want to share / need one), and notes
+for dietary needs.
+
+The page shows a tally of **people and cars from Yes responses** against the
+20-person group site. Maybe is separate and does not count toward the 20.
+Names, emails, and notes never come back to the browser.
+
+Storage is the existing Supabase project **Lafayette Pulse**. A public Edge
+Function (`campout-rsvp`, `verify_jwt` off) inserts rows and returns the tally.
+The project API key is not in this repo. Table `campout_rsvps` has row level
+security forced on, no policies, and no grants for `anon`. Gene reads responses
+in the [table editor](https://supabase.com/dashboard/project/kcrhxkebazpospwljpit/editor?schema=public).
+`campout_rsvps_latest` is the latest row per family name. If a family sends a
+second RSVP, use that view.
+
+Nothing else is required before the form can save, once this branch is merged
+and Pages has rebuilt. The live site is `main`.
 
 ## Run
 
