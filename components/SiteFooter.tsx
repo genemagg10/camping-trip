@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { ExtLink } from "@/components/ExtLink";
+import { campout } from "@/lib/campout";
 import { trip } from "@/lib/trip";
 
 export function SiteFooter() {
@@ -12,7 +14,12 @@ export function SiteFooter() {
           <p>
             {trip.datesShort} · {trip.homeTown}
           </p>
-          <p className="mt-1 max-w-md text-pretty">{trip.hold} No RSVP on this page.</p>
+          <p className="mt-1 max-w-md text-pretty">
+            <Link href="/rsvp" className="text-link">
+              RSVP
+            </Link>{" "}
+            for {campout.place}, {campout.site}, {campout.dates}.
+          </p>
         </div>
         <p className="max-w-sm text-pretty sm:text-right">
           The den is not going rafting. Photo credits and the price sources live in{" "}

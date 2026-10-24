@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { CompareTable } from "@/components/CompareTable";
 import { Postcard } from "@/components/Postcard";
+import { RsvpBanner } from "@/components/RsvpBanner";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StillToFigure } from "@/components/StillToFigure";
 import { TripOption } from "@/components/TripOption";
@@ -10,6 +12,7 @@ export default function Home() {
   return (
     <main className="min-w-0">
       <Postcard />
+      <RsvpBanner />
       <nav id="options" aria-label="Trip options" className="option-jump scroll-mt-4">
         <p className="w-full text-xs font-extrabold tracking-[0.16em] text-foam uppercase">
           Jump to an option
@@ -19,6 +22,7 @@ export default function Home() {
             {jump.label}
           </a>
         ))}
+        <Link href="/rsvp">RSVP</Link>
       </nav>
       {options.map((option) => (
         <TripOption key={option.id} option={option} />

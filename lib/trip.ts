@@ -1,12 +1,11 @@
 import { asset } from "@/lib/asset";
 
-/** Soft-hold weekend shared by all three options. Nothing is booked. */
+/** Comparison weekend on the pitch. The campout being filled is in lib/campout.ts. */
 export const trip = {
   den: "Arrow of Light den",
   dates: "Fri Apr 23 to Sun Apr 25, 2027",
   datesShort: "Fri Apr 23 to Sun Apr 25, 2027",
   homeTown: "Lafayette, CA",
-  hold: "Soft hold on the dates only. Nothing is booked.",
   headcount:
     "Costs assume six Scouts and six dads (one adult with each Scout) unless a line says otherwise.",
 } as const;

@@ -1,0 +1,4 @@
+:HL["/camping-trip/_next/static/chunks/2k0f6jdq6nqdb.css","style"]
+:HL["/camping-trip/_next/static/media/47df9ba1c7236d3b-s.p.2adce56gso3ku.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/camping-trip/_next/static/media/d622c970823c5a32-s.p.12zymgsojk14i.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"rsvp","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"2uSU6Z1APfw3JN_6hsxEi"}

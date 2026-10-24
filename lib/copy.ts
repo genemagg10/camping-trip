@@ -25,13 +25,13 @@ export const copy = {
     line2: "Angel Island, Coloma, or Pinnacles",
     dates: "Fri Apr 23 to Sun Apr 25, 2027",
     cta: "See the three options",
-    hold: "Soft hold on the dates only. Nothing is booked.",
+    hold: "Pinnacles group site #127 is the campout. Fri Apr 30 to Sun May 2.",
   },
   why: {
     title: "What changed",
     p1: "I had this weekend pointed at the South Fork, with a raft trip as the thing we would bring home. Then I read the current age chart. Whitewater, even with a professional guide on the boat, is marked for Scouts BSA and older. Our Scouts are still Arrow of Light, which is still Cub Scouts. So the den is not going rafting.",
     p2: "The dates stay: Friday, April 23 through Sunday, April 25, 2027. What changed is the menu. Three real weekends, each one a den campout we can actually run, with the trade-offs written down so we can pick.",
-    p3: "Nothing is booked. This is a soft hold on the calendar. Costs below assume six Scouts and six dads, one adult with each Scout, unless a line says otherwise. A smaller den moves the per-pair number. The comparison table is at the bottom, after each option has had a full say.",
+    p3: "The campout we are filling is Pinnacles group site #127, Friday April 30 through Sunday May 2, 2027. Send an RSVP so the headcount is real. The three write-ups below are how that choice got made. Costs assume six Scouts and six dads, one adult with each Scout, unless a line says otherwise. A smaller den moves the per-pair number. The comparison table is at the bottom, after each option has had a full say.",
   },
   rule: {
     title: "The rule, in one paragraph",
@@ -123,15 +123,15 @@ export const compare = {
 
 export const still = {
   title: "What we still need to figure out",
-  lede: "Nothing is booked. These are the questions that pick the weekend, or that block a reservation once we pick.",
+  lede: "Pinnacles is the campout. These are the questions still open.",
   items: [
-    "Which of the three we are actually doing.",
+    "Headcount. Use the RSVP page. Yes responses count against the 20-person group site.",
     "Headcount, so the per-pair math is real. Everything above assumes six Scouts and six dads.",
     "Who the BALOO-trained adult is. An Arrow of Light den campout needs one.",
     "Whether the campsite is on our council's approved list, or whether we need a tour plan. That question sits on all three.",
     "Angel Island: two environmental sites or Kayak Camp, and whether the spring timetable has a Friday Tiburon boat.",
     "Coloma: will Whitewater Excitement rent the camp to a den that is not booking rafts? If not, Camp Lotus or another Coloma campground.",
-    "Pinnacles: is a group site still open for April 23 to 25, 2027, and what does it cost tonight on recreation.gov?",
+    "Pinnacles group site #127 is the site for April 30 to May 2. If Yes responses pass 20, regular sites hold 6 people each.",
     "If we need a release-day alarm, who is logged in at 8:00 a.m. Pacific on Friday, October 23, 2026. That morning opens Angel Island, and it opens Pinnacles tent sites. Pinnacles group sites will not wait for it.",
   ],
 } as const;
