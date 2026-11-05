@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ExtLink } from "@/components/ExtLink";
 import { Reveal } from "@/components/Reveal";
 import { ScheduleIconMark } from "@/components/ScheduleIcons";
@@ -225,6 +226,13 @@ export function TripOption({ option }: { option: TripOptionData }) {
             Arrow of Light
           </h3>
           <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">{option.aol}</p>
+          {option.planHref ? (
+            <p className="mt-3">
+              <Link href={option.planHref} className="text-link">
+                Final campout plan
+              </Link>
+            </p>
+          ) : null}
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">

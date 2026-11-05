@@ -15,10 +15,14 @@ export function SiteFooter() {
             {trip.datesShort} · {trip.homeTown}
           </p>
           <p className="mt-1 max-w-md text-pretty">
+            <Link href="/plan" className="text-link">
+              Final campout plan
+            </Link>
+            {" and "}
             <Link href="/rsvp" className="text-link">
               RSVP
             </Link>{" "}
-            for {campout.place}, {campout.site}, {campout.dates}.
+            for {campout.place}, {campout.site} and {campout.tentSite.toLowerCase()}, {campout.dates}.
           </p>
         </div>
         <p className="max-w-sm text-pretty sm:text-right">

@@ -1,9 +1,12 @@
 # Arrow of Light den weekends
 
 Warm dad-postcard pitch for an Arrow of Light den (Cub Scouts, about 10 to 11).
-The comparison weekend is **Fri Apr 23 to Sun Apr 25, 2027**. The campout we are
-filling is **Pinnacles Campground, group site #127, Fri Apr 30 to Sun May 2, 2027**.
-RSVP is at `/rsvp`.
+The comparison weekend is **Fri Apr 23 to Sun Apr 25, 2027**. The campout we
+booked is **Pinnacles Campground, group site #127 (Loop G, 20 people) and tent
+site #130, Fri Apr 30 to Sun May 2, 2027**. Reservation `0921591357-1`, free to
+cancel until April 16, 2027. Tent #130 is about 90 meters from the group site.
+RSVP is at `/rsvp`. The Arrow of Light goals and the weekend plan are at `/plan`.
+Adventure completion on that page is TBD until Gene marks it.
 
 The den is not going whitewater rafting. The BSA Age-Appropriate Guidelines
 (form 680-685, August 2024) check guided whitewater, and youth-operated Class I
@@ -38,6 +41,11 @@ A comparison table (cost, drive, booking, wow, rules fit, weather) sits
 after the three write-ups, then a single list of what we still need to
 figure out.
 
+The home page also carries a short version of the final campout: the current
+Arrow of Light rank (6 required adventures and any 2 electives, not the old
+Webelos Camper list), the jobs that can use this overnight, and Friday through
+Sunday. `/plan` is the full write-up. Every adventure stamp says TBD.
+
 ## Retired locks
 
 The earlier pitch was a South Fork rafting weekend with Whitewater Excitement,
@@ -54,7 +62,7 @@ Public pitch (GitHub Pages):
 
 Public URL is GitHub Pages from **`main` `/`** (already enabled).
 A static export is committed at the repo root (`index.html`, `_next/`,
-`photos/`, `.nojekyll`) so Jekyll is skipped and the pitch loads.
+`photos/`, `rsvp/`, `plan/`, `.nojekyll`) so Jekyll is skipped and the pitch loads.
 
 Refresh those files after source edits:
 

@@ -17,11 +17,11 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Three ways to close out Cubs · Arrow of Light den",
   description:
-    "Arrow of Light den, dads and Scouts. Fri Apr 23 to Sun Apr 25, 2027. Three weekends to compare: Angel Island, a Coloma campout, and Pinnacles. Soft hold only. Nothing booked. The den is not going rafting.",
+    "Arrow of Light den, dads and Scouts. The booked campout is Pinnacles Campground, group site #127 and tent site #130, Fri Apr 30 to Sun May 2, 2027. The pitch still compares Angel Island, Coloma, and Pinnacles. The den is not going rafting.",
   openGraph: {
     title: "Three ways to close out Cubs · Arrow of Light den",
     description:
-      "Fri Apr 23 to Sun Apr 25, 2027. Angel Island, Coloma, or Pinnacles. Soft hold only. Nothing booked.",
+      "Booked: Pinnacles group site #127 and tent site #130, Fri Apr 30 to Sun May 2, 2027. The pitch still compares Angel Island, Coloma, and Pinnacles.",
     type: "website",
   },
 };

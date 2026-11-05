@@ -162,6 +162,13 @@ export function Postcard() {
             <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
               {copy.why.p3}
             </p>
+            <p className="mt-3 text-[1.02rem] leading-relaxed text-pretty">
+              Goals for the booked weekend, and the day-by-day plan, sit on the{" "}
+              <Link href="/plan" className="text-link">
+                final campout plan
+              </Link>
+              . Every adventure there is marked TBD until we know what is already signed off.
+            </p>
           </div>
 
           <aside className="rule-aside min-w-0">

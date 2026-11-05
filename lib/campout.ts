@@ -3,11 +3,18 @@
 export const campout = {
   place: "Pinnacles Campground",
   site: "Group site #127",
+  siteLoop: "Loop G",
+  tentSite: "Tent site #130",
+  tentDistance: "about 90 meters",
+  tentCluster: "sites 130 to 134",
+  otherLoop: "Loop C, sites 57 to 61",
   dates: "Fri Apr 30 to Sun May 2, 2027",
   datesLong: "Friday, April 30 through Sunday, May 2, 2027",
   peopleCap: 20,
   regularSitePeople: 6,
   groupVehicles: 5,
+  reservation: "0921591357-1",
+  cancelBy: "April 16, 2027",
   endpoint: "https://kcrhxkebazpospwljpit.supabase.co/functions/v1/campout-rsvp",
 } as const;
 

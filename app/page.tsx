@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CampoutPreview } from "@/components/CampoutPreview";
 import { CompareTable } from "@/components/CompareTable";
 import { Postcard } from "@/components/Postcard";
 import { RsvpBanner } from "@/components/RsvpBanner";
@@ -24,6 +25,7 @@ export default function Home() {
         ))}
         <Link href="/rsvp">RSVP</Link>
       </nav>
+      <CampoutPreview />
       {options.map((option) => (
         <TripOption key={option.id} option={option} />
       ))}
