@@ -48,10 +48,14 @@ export default function RsvpPage() {
       <div className="option-inner">
         <p className="max-w-3xl text-pretty text-[1.05rem] leading-relaxed">
           One response per family for {campout.datesLong}. Yes counts toward the {campout.peopleCap}{" "}
-          people on {campout.site.toLowerCase()}. Maybe is written down, and it does not take a spot until you switch
-          to Yes. If we go past {campout.peopleCap}, regular sites hold {campout.regularSitePeople} people each. Use
-          the notes for dietary needs, including celiac-safe food. Only Gene sees names, email, and notes. This page
-          shows people and cars.
+          people on {campout.site.toLowerCase()} in {campout.siteLoop}. {campout.tentSite} is already booked,{" "}
+          {campout.tentDistance} away, and a regular tent site holds {campout.regularSitePeople}. Maybe is written
+          down, and it does not take a spot until you switch to Yes. Use the notes for dietary needs, including
+          celiac-safe food. Only Gene sees names, email, and notes. This page shows people and cars. The{" "}
+          <Link href="/plan" className="text-link">
+            final campout plan
+          </Link>{" "}
+          is the Arrow of Light weekend. Adventure completion there is still TBD.
         </p>
         <div className="mt-8">
           <RsvpForm />

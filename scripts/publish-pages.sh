@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 GITHUB_PAGES=true npm run build
 touch out/.nojekyll
-rm -rf _next photos 404 rsvp
+rm -rf _next photos 404 rsvp plan
 cp -a out/.nojekyll out/index.html out/404.html out/icon.svg .
-cp -a out/_next out/photos out/404 out/rsvp .
-echo "Root Pages files refreshed. Commit index.html, 404.html, icon.svg, .nojekyll, _next/, photos/, rsvp/."
+cp -a out/_next out/photos out/404 out/rsvp out/plan .
+echo "Root Pages files refreshed. Commit index.html, 404.html, icon.svg, .nojekyll, _next/, photos/, rsvp/, plan/."

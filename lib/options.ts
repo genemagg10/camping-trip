@@ -57,6 +57,7 @@ export type TripOption = {
   cons: string[];
   questions: string[];
   sources: LinkItem[];
+  planHref?: string;
 };
 
 const outdoorAdventurer: LinkItem = {
@@ -567,7 +568,7 @@ export const options: TripOption[] = [
     kicker: "Option 3 · The one I would pick",
     title: "Pinnacles",
     place: "East side campground, Pinnacles National Park",
-    lede: "A den campout on the east side of Pinnacles National Park, then a day hike through Bear Gulch, the talus cave trail under the rockfall, if the park has it open. This is a maintained trail with a flashlight. It is not a caving trip.",
+    lede: "This is the weekend we booked: Friday, April 30 through Sunday, May 2, 2027, group site #127 in Loop G and tent site #130. A den campout on the east side of Pinnacles National Park, then a day hike through Bear Gulch, the talus cave trail under the rockfall, if the park has it open. This is a maintained trail with a flashlight. It is not a caving trip.",
     why: [
       "Late April is the Pinnacles window. The lower Bear Gulch cave may be open from April 1 to about mid-May. It then closes for Townsend's big-eared bat pups, and a warm spring can close the whole cave earlier. Wildflowers and California condors are the bonus. The campground pool, when it is open, is not on our plan.",
       "I looked hard at the other ideas before landing here. USS Hornet in Alameda is closer, and a weekend group of 10 or more is $100 a person with dinner and breakfast included. It is one night on the ship, not a Friday-to-Sunday campout. Organized Scout groups need a $1 million certificate of insurance naming the Aircraft Carrier Hornet Foundation, plus a council tour permit, and they ask for 1 adult to 6 youth once the kids are 10 or older. Great program. Wrong shape for this weekend. Point Reyes hike-in camps are overnight backcountry, and that row on the age chart is Scouts BSA and older. A canoe weekend sounds right until you read Cub Paddle Craft: council or district events, flat water, warm air, warm water, no real wind, and not run as a trip. Late April on a Bay Area lake usually fails that test. Redwoods are legal and beautiful, and they are a quieter story than walking a trail the park built through a cave.",
@@ -596,16 +597,16 @@ export const options: TripOption[] = [
           },
           {
             time: "1:00 p.m.",
-            title: "Check in",
+            title: "Check in at Loop G",
             detail:
-              "Group site if we got one. Tents only. No RVs, trailers, or motorhomes on a group site. Five vehicles, and extra cars use the overnight lot. Picnic table, fire ring, water nearby. The camp store is open about 9:30 to 5. Camping questions go to Pinnacles Recreation Company at (831) 200-1722. The park is (831) 389-4486.",
+              "Group site #127 is booked, tents only, up to 20 people and 5 vehicles. Tent site #130 is booked about 90 meters away, with sites 130 to 134. Loop C, sites 57 to 61, is not us. No RVs, trailers, or motorhomes on the group site. Extra cars use the overnight lot. Picnic table, fire ring, water nearby. The camp store is open about 9:30 to 5. Camping questions go to Pinnacles Recreation Company at (831) 200-1722. The park is (831) 389-4486. Reservation 0921591357-1. Free to cancel until April 16, 2027.",
             icon: "tent",
           },
           {
             time: "Evening",
-            title: "Den dinner",
+            title: "Lay out camp, then an easy dinner",
             detail:
-              "A fire in the ring only if current conditions allow it. Buy wood at the store. Do not collect it. Battery lanterns either way. Dads run any stove that burns fuel.",
+              "Patrol gear goes up before personal tents: kitchen, eating area, tents, and the fire pit. Dinner is gluten-free by default, with a clean pan. Then a three-pot wash. A fire in the ring only if current conditions allow it. Buy wood at the store. Do not collect it. Battery lanterns either way. Dads run any stove that burns fuel. The operating plan for the Arrow of Light pieces is the final campout plan.",
             icon: "lantern",
           },
         ],
@@ -637,9 +638,9 @@ export const options: TripOption[] = [
           },
           {
             time: "Evening",
-            title: "Second dinner",
+            title: "The meal the Scouts cook",
             detail:
-              "Same kitchen rules as Friday. Quiet hours are the park's. We do not invent a louder one.",
+              "A balanced camp meal, gluten-free, cooked with camp gear. Adults cut if Knife Safety is not earned. Same wash as Friday. Quiet hours are the park's. We do not invent a louder one. One afternoon skill block is enough. The full order of the day is on the final campout plan.",
             icon: "utensils",
           },
         ],
@@ -650,9 +651,9 @@ export const options: TripOption[] = [
         beats: [
           {
             time: "Morning",
-            title: "A short walk, then out",
+            title: "Close the campout, then out",
             detail:
-              "South Wilderness is a short walk from camp. The Bench Trail is the other easy option. Then pack. Checkout is 11 a.m.",
+              "Breakfast stays gluten-free. If the morning is ahead of checkout, South Wilderness is the short walk from camp. Then Start, Stop, Continue, pack the patrol gear, and leave time for a wet tent. Checkout is 11 a.m.",
             icon: "hike",
           },
           {
@@ -674,12 +675,12 @@ export const options: TripOption[] = [
       {
         label: "Lodging",
         value:
-          "Pinnacles Campground, operated by Pinnacles Recreation Company. Group site preferred: up to 20 people, 5 vehicles, tents only, in the group loop. Check-in 1 p.m., checkout 11 a.m. Coin showers, a dump station, and a store.",
+          "Booked at Pinnacles Campground, operated by Pinnacles Recreation Company. Group site #127 in Loop G: up to 20 people, 5 vehicles, tents only. Tent site #130 is about 90 meters away. Reservation 0921591357-1. Free to cancel until April 16, 2027. Check-in 1 p.m., checkout 11 a.m. Coin showers, a dump station, and a store.",
       },
       {
         label: "Book",
         value:
-          "recreation.gov campground 234015, or (877) 444-6777. No first-come sites. The National Park Service says group sites can be reserved up to 12 months ahead, so an April 23, 2027 arrival may have opened around April 23, 2026. Check this week. Tent and RV sites open up to 6 months ahead, so an April 23 arrival opens October 23, 2026. Recreation.gov often releases new dates at 7:00 a.m. Pacific. Confirm that clock on the campground page before anyone sets an alarm.",
+          "The reservation is in on recreation.gov, campground 234015. Group reservation 0921591357-1. Free to cancel until April 16, 2027. Phone is (877) 444-6777. No first-come sites. The old question was whether a group site for the comparison weekend was still open. The booked nights are April 30 to May 2.",
       },
       {
         label: "Entrance",
@@ -702,7 +703,8 @@ export const options: TripOption[] = [
       "A flashlight or headlamp for every person, plus spare batteries, if we hope to enter the cave.",
       "Sturdy shoes. The cave trail is rocky and can be wet.",
       "A warm bag. April nights in the rocks are real.",
-      "Food for Friday dinner through Sunday breakfast. The store closes around 5 p.m.",
+      "Food for Friday dinner through Sunday breakfast, gluten-free for the meals the Scouts cook, plus a clean pan and a separate board. The store closes around 5 p.m.",
+      "Three tubs or pots for the wash, and soap that is safe for camp.",
       "A few dollars for coin showers.",
       "Firewood only if the park says fires are allowed. Do not collect wood.",
       "An Interagency pass, if a family already has one. It covers the $30 vehicle entrance.",
@@ -725,27 +727,27 @@ export const options: TripOption[] = [
     costTotal: "About $150 to $200",
     costNote:
       "One Scout and one adult. Six pairs sharing one group site and carpooling in about three cars lands near $150 when the site is around $110 a night. The recreation.gov gateway currently lists this campground from $44 to $139 a night, so two nights at the top of that range is about $46 a pair before entrance, food, and gas, and the total climbs toward $200. If each pair drives, add entrance and gas and expect the top of the range. The 2012 park fee table (tents $23, group sites $75 or $110) is stale. Do not budget from it. A 2026 camper note put group sites near $110 plus a weekend surcharge. Confirm the live rate on recreation.gov before we treat any of these dollars as final. Coin showers are extra and small.",
-    aol: "Outdoor Adventurer again: the campout pieces, on purpose, with a BALOO-trained adult. Into the Wild is the elective that fits without stretching, if the den still needs one. Condors and bats are the lesson, watched and left alone. We do not write 'caving' on any advancement report. The age chart gives caving, other than simple novice activities, to older Scouts only. This is a day hike on a park trail.",
+    aol: "The final campout plan uses the current Arrow of Light adventures, the ones from June 2024 on, not the old Webelos Camper list. Outdoor Adventurer is the required overnight. Into the Woods or Into the Wild can be one elective, if the den still needs it. Condors and bats are watched and left alone. We do not write caving on any advancement report. Every adventure is marked TBD until Gene knows what is already signed off.",
+    planHref: "/plan",
     pros: [
       "The most adventurous weekend on this list that still fits the rules.",
-      "One reservation can hold the whole den, up to 20 people.",
+      "Group site #127 is booked and holds up to 20. Tent site #130 is the extra site.",
       "Cars park close. No ferry, and no two-mile gear haul.",
       "Late April weather here is the kindest of the three.",
     ],
     cons: [
-      "Group sites may already be gone. The 12-month window has been open for months.",
+      "The group site holds 20. Past that, tent site #130 is one regular site, and the roster is still unknown.",
       "The cave can close for bats or high water, and the weekend still has to be good without it.",
       "About 3 hours each way.",
       "The published fee table is stale, so the budget stays a range until we see the live rate.",
       "We have to keep calling it a hike. The moment it becomes a caving trip, it is off the chart for these Scouts.",
     ],
     questions: [
-      "Is a group site still open for April 23 to 25, 2027, and what is the live nightly rate?",
-      "If the group site is gone, can we get enough tent sites when they open on October 23, 2026?",
       "What does the cave status page say the week of the trip?",
       "Is a spring shuttle running, or do we shuttle ourselves and leave the extra cars at camp?",
       "Are fires allowed that weekend?",
       "Council approved-campsite list, and who is the BALOO-trained adult?",
+      "Which Arrow of Light adventures are already signed off? The plan marks every one TBD.",
     ],
     sources: [
       {

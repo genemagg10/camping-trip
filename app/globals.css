@@ -944,6 +944,34 @@ html.js-reveal .reveal.is-in {
   accent-color: var(--forest);
 }
 
+/* Paddle-gold stamp for adventure status. Not BSA insignia.
+   Visible without animation so a TBD line never looks finished. */
+.tbd-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 1.75rem;
+  padding: 0.15rem 0.45rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.3rem;
+  background: color-mix(in srgb, var(--patch-gold) 78%, white);
+  color: var(--ink);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: rotate(-6deg);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.tbd-stamp.is-done {
+  background: var(--forest);
+  color: var(--foam);
+  transform: rotate(-2deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .flame-bit,
   .flame-tip,

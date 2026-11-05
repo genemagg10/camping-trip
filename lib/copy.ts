@@ -25,13 +25,13 @@ export const copy = {
     line2: "Angel Island, Coloma, or Pinnacles",
     dates: "Fri Apr 23 to Sun Apr 25, 2027",
     cta: "See the three options",
-    hold: "Pinnacles group site #127 is the campout. Fri Apr 30 to Sun May 2.",
+    hold: "Booked: group site #127 and tent #130. Fri Apr 30 to Sun May 2.",
   },
   why: {
     title: "What changed",
     p1: "I had this weekend pointed at the South Fork, with a raft trip as the thing we would bring home. Then I read the current age chart. Whitewater, even with a professional guide on the boat, is marked for Scouts BSA and older. Our Scouts are still Arrow of Light, which is still Cub Scouts. So the den is not going rafting.",
     p2: "The dates stay: Friday, April 23 through Sunday, April 25, 2027. What changed is the menu. Three real weekends, each one a den campout we can actually run, with the trade-offs written down so we can pick.",
-    p3: "The campout we are filling is Pinnacles group site #127, Friday April 30 through Sunday May 2, 2027. Send an RSVP so the headcount is real. The three write-ups below are how that choice got made. Costs assume six Scouts and six dads, one adult with each Scout, unless a line says otherwise. A smaller den moves the per-pair number. The comparison table is at the bottom, after each option has had a full say.",
+    p3: "The campout we booked is Pinnacles group site #127 in Loop G, plus tent site #130, Friday April 30 through Sunday May 2, 2027. Send an RSVP so the headcount is real. The three write-ups below are how that choice got made. Costs assume six Scouts and six dads, one adult with each Scout, unless a line says otherwise. A smaller den moves the per-pair number. The comparison table is at the bottom, after each option has had a full say.",
   },
   rule: {
     title: "The rule, in one paragraph",
@@ -54,6 +54,7 @@ export const copy = {
 } as const;
 
 export const jumps = [
+  { href: "#campout-plan", label: "Campout plan" },
   { href: "#angel-island", label: "Angel Island" },
   { href: "#coloma", label: "Coloma camp" },
   { href: "#pinnacles", label: "Pinnacles" },
@@ -62,7 +63,7 @@ export const jumps = [
 
 export const compare = {
   title: "Side by side",
-  lede: "Same dates, three different weekends. Prices are per Scout plus one Dad, six pairs, and they are ranges on purpose.",
+  lede: "Prices are per Scout plus one Dad, six pairs, and they are ranges on purpose. The comparison weekend is Apr 23 to 25. Pinnacles is booked for the next weekend, Apr 30 to May 2.",
   swipe: "On a phone, swipe sideways. The topic column stays put.",
   columns: [
     { id: "angel-island", label: "Angel Island" },
@@ -91,7 +92,7 @@ export const compare = {
       cells: [
         "Hard. ReserveCalifornia opens Apr 23, 2027 on Fri Oct 23, 2026 at 8:00 a.m. Pacific.",
         "Medium. Call the camp. No release-day lottery. Ask if they will rent it without a raft booking.",
-        "Group sites can book 12 months out, so check this week. Tent sites for an Apr 23 arrival open Oct 23, 2026.",
+        "Booked for Apr 30 to May 2: group site #127 in Loop G and tent site #130. Free to cancel until Apr 16, 2027.",
       ],
     },
     {
@@ -131,7 +132,8 @@ export const still = {
     "Whether the campsite is on our council's approved list, or whether we need a tour plan. That question sits on all three.",
     "Angel Island: two environmental sites or Kayak Camp, and whether the spring timetable has a Friday Tiburon boat.",
     "Coloma: will Whitewater Excitement rent the camp to a den that is not booking rafts? If not, Camp Lotus or another Coloma campground.",
-    "Pinnacles group site #127 is the site for April 30 to May 2. If Yes responses pass 20, regular sites hold 6 people each.",
-    "If we need a release-day alarm, who is logged in at 8:00 a.m. Pacific on Friday, October 23, 2026. That morning opens Angel Island, and it opens Pinnacles tent sites. Pinnacles group sites will not wait for it.",
+    "Pinnacles group site #127 in Loop G and tent site #130 are booked for April 30 to May 2. Tent #130 is about 90 meters away. Reservation 0921591357-1, free to cancel until April 16, 2027. If Yes responses pass 20, the tent site is the extra room. A regular tent site holds 6. The roster past that cap is still unknown.",
+    "Which Arrow of Light adventures are already signed off. The campout plan marks every one TBD.",
+    "Angel Island's ReserveCalifornia morning was Friday, October 23, 2026, and that morning has passed. Pinnacles does not need it.",
   ],
 } as const;
